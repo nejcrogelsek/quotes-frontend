@@ -3,6 +3,7 @@
     box-shadow: none;
   }
 }
+.navbar-toggler:not(.collapsed) ~ .add-quote,
 .navbar-toggler:not(.collapsed) ~ .navbar-brand {
   opacity: 0;
   pointer-events: none;
@@ -35,13 +36,39 @@
     .nav-link {
       color: $dark;
       font-size: 1.5rem;
-      position: relative;
+      padding: 0;
       > span {
         width: calc(100% - 25px);
         display: inline-block;
       }
-      > .MuiSvgIcon-root {
-        font-size: 2rem;
+    }
+    button.nav-link {
+      background: transparent;
+      border: none;
+      width: 100%;
+      text-align: left;
+      color: $orange;
+      > svg > path {
+        fill: $orange;
+      }
+    }
+  }
+  &.isAuth {
+    > li {
+      margin-bottom: 48px;
+      &:last-child {
+        margin-bottom: 18px;
+      }
+      &.user-item {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 1.5rem;
+        .MuiAvatar-root {
+          width: 48px;
+          height: 48px;
+          margin-right: 32px;
+        }
       }
     }
   }
