@@ -8,7 +8,7 @@ interface Props extends RouteProps {
 const PublicRoute: FC<Props> = ({ component: Component, ...rest }) => {
     const [authenticated, setAuthenticated] = useState<boolean>(false);
     return (
-        <Route {...rest} render={props => !authenticated ? <Component {...props} /> : <Redirect to="/me" />} />
+        <Route {...rest} render={props => !authenticated ? <Component {...props} /> : <Redirect to='/me' />} />
     )
 
 }

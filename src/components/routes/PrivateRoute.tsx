@@ -10,7 +10,7 @@ const PrivateRoute: FC<Props> = ({ component: Component, ...rest }) => {
     const [authenticated, setAuthenticated] = useState<boolean>(false);
 
     return (
-        <Route {...rest} render={props => authenticated ? <Component {...props} /> : <Redirect to="/Login" />} />
+        <Route {...rest} render={props => authenticated ? <Component {...props} /> : <Redirect to='/login' />} />
     )
 
 }
