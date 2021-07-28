@@ -1,0 +1,96 @@
+/* Fonts */
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway-Thin.ttf") format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway-ExtraLight.ttf") format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway-Light.ttf") format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway-Regular.ttf") format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway-Medium.ttf") format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway-SemiBold.ttf") format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway-Bold.ttf") format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway-ExtraBold.ttf") format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway-Black.ttf") format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* Media breakpoints */
+$xsmall: "(max-width: 576px)";
+$small: "(min-width: 576px)";
+$medium: "(min-width: 768px)";
+$large: "(min-width: 992px)";
+$xlarge: "(min-width: 1200px)";
+$xxlarge: "(min-width: 1400px)";
+
+/* Text Color */
+$orange: #DE8667;
+$orange2: #EFB467;
+$background: #322D38;
+$white: #fff;
+
+$fonts: "Raleway";
+
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-size: 1rem;
+  font-family: $fonts;
+  list-style: none;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+img {
+  max-width: 100%;
+}
