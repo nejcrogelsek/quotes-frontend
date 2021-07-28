@@ -65,7 +65,7 @@ $xxlarge: "(min-width: 1400px)";
 /* Text Color */
 $orange: #de8667;
 $orange2: #efb467;
-$background: #322d38;
+$dark: #322d38;
 $white: #fff;
 
 $fonts: "Raleway";
@@ -93,4 +93,26 @@ code {
 }
 img {
   max-width: 100%;
+}
+.orange {
+  color: $orange;
+}
+.site-btn {
+  width: 100%;
+  border-radius: 32px;
+  height: 40px;
+  line-height: 24px;
+  &.active:focus,
+  &:focus {
+    box-shadow: none;
+  }
+  &.btn-orange {
+    background: $orange;
+    color: $white;
+  }
+  &.btn-light {
+    background: $white;
+    color: $orange;
+    border: 2px solid $orange;
+  }
 }
