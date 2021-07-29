@@ -65,6 +65,7 @@ $xxlarge: "(min-width: 1400px)";
 /* Text Color */
 $orange: #de8667;
 $orange2: #efb467;
+$orangeLinear: linear-gradient(90deg, $orange 0%, $orange2 100%);
 $red: red;
 $dark: #322d38;
 $black: #000;
@@ -117,7 +118,7 @@ a {
     box-shadow: none;
   }
   &.btn-orange {
-    background: $orange;
+    background: $orangeLinear;
     color: $white;
   }
   &.btn-light {
