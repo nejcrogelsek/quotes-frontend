@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 export type SignUpData = {
     email: string;
@@ -11,6 +11,7 @@ export type SignUpData = {
 }
 
 const RegisterForm: FC = () => {
+    const location = useLocation();
     const { register, handleSubmit, formState: { errors }, reset } = useForm<SignUpData>();
 
     const onSubmit = handleSubmit((data) => {
@@ -25,7 +26,6 @@ const RegisterForm: FC = () => {
             console.log('Error message:', err);
         }
     }
-
 
     return (
         <form onSubmit={onSubmit} className='form'>
@@ -60,13 +60,21 @@ const RegisterForm: FC = () => {
                 <input {...register('confirmPassword', { required: 'Please confirm password' })} type='text' name='confirmPassword' className='form-control' />
                 {errors.confirmPassword && <span className='form-text required'>{errors.confirmPassword.message}</span>}
             </div>
-            <div className='buttons'>
-                <input className='site-btn btn-orange' type='submit' value='Sign up' />
-            </div>
-            <div className="goto-login">
-                <p>Already have an account?</p>
-                <Link to="/login" className="orange">Sign in</Link>
-            </div>
+            {location.pathname.slice(1, location.pathname.length) === 'signup' ?
+                <>
+                    <div className='buttons'>
+                        <input className='site-btn btn-orange' type='submit' value='Sign up' />
+                    </div>
+                    <div className="goto-login">
+                        <p>Already have an account?</p>
+                        <Link to="/login" className="orange">Sign in</Link>
+                    </div>
+                </> :
+                <div className='buttons'>
+                    <input className='site-btn btn-orange' type='submit' value='Submit' />
+                    <button type="button" className="btn" data-bs-dismiss="modal" aria-label="Close">Close</button>
+                </div>
+            }
         </form>
     )
 }

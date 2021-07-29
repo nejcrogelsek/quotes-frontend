@@ -27,7 +27,7 @@ const LoginForm: FC = () => {
         <form onSubmit={onSubmit} className='form'>
             <div className='form-element'>
                 <label htmlFor='email' className='form-label'>Email</label>
-                <input {...register('email', { required: 'Full name is required' })} type='text' name='email' className='form-control' />
+                <input {...register('email', { required: 'Email is required' })} type='text' name='email' className='form-control' />
                 {errors.email && <span className='form-text required'>{errors.email.message}</span>}
             </div>
             <div className='form-element'>

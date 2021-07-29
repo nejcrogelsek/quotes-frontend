@@ -8,7 +8,7 @@ const SettingsModal: FC = () => {
                 <div className='modal-content'>
                     <div className='modal-body'>
                         <h2 className='page-title'>Profile <span>settings</span></h2>
-                        <p>Change your profile settings</p>
+                        <p>Change your profile settings.</p>
                         <RegisterForm />
                     </div>
                 </div>

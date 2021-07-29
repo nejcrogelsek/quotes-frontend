@@ -4,6 +4,9 @@
   }
   .form-element {
     margin-bottom: 1rem;
+    &.textarea {
+      margin: 2rem 0;
+    }
     .form-label {
       font-size: 0.75rem;
       margin-bottom: 8px;
@@ -22,6 +25,10 @@
       font-size: 0.75rem;
       color: $red;
     }
+    textarea {
+      height: 124px !important;
+      resize: none;
+    }
   }
   .buttons {
     margin-bottom: 1rem;
@@ -35,6 +42,19 @@
     }
     > a:hover {
       color: $orange;
+    }
+  }
+}
+.modal form > .buttons {
+  > input {
+    display: inline-block;
+    margin-right: 30px;
+    width: 137px;
+  }
+  button {
+    display: inline-block;
+    &:focus {
+      box-shadow: none;
     }
   }
 }

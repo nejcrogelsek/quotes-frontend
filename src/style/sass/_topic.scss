@@ -24,9 +24,12 @@
   padding-top: 95px;
   .modal-dialog {
     margin: 0 auto;
-    max-width: 529px;
+    max-width: 595px;
     .modal-body {
       padding: 40px 32px 32px 32px;
+      .page-title {
+        margin-bottom: 1rem;
+      }
     }
   }
 }
