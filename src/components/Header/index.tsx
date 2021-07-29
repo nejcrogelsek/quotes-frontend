@@ -5,7 +5,7 @@ import MobileNav from './MobileNav'
 import DesktopNav from './DesktopNav'
 
 const Header: FC = () => {
-    const [isAuthenticated, setIsAuthenticated] = useState(false);
+    const [isAuthenticated, setIsAuthenticated] = useState(true);
     const [isMobile, setIsMobile] = useState(true);
     const [toggle, setToggle] = useState(false);
 
@@ -37,7 +37,7 @@ const Header: FC = () => {
                         <Menu />
                     </button>
                     <Logo />
-                    {isAuthenticated ?
+                    {isAuthenticated && isMobile ?
                         <button className='navbar-toggler add-quote' type='button'>
                             <Add />
                         </button> : null}
