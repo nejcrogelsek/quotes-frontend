@@ -36,7 +36,7 @@ const LoginForm: FC = () => {
                 {errors.password && <span className='form-text required'>{errors.password.message}</span>}
             </div>
             <div className='buttons'>
-                <input className='site-btn btn-light' type='submit' value='Pošlji' />
+                <input className='site-btn btn-light' type='submit' value='Login' />
             </div>
         </form>
     )

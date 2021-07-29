@@ -1,6 +1,6 @@
 .form {
   .row .col:first-child {
-    padding-right: 0;
+    padding-right: 4px;
   }
   .form-element {
     margin-bottom: 1rem;
@@ -21,6 +21,20 @@
     .form-text {
       font-size: 0.75rem;
       color: $red;
+    }
+  }
+  .buttons {
+    margin-bottom: 1rem;
+  }
+  .goto-login {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    > p {
+      margin: 0;
+    }
+    > a:hover {
+      color: $orange;
     }
   }
 }

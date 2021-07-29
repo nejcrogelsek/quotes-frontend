@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import { useForm } from 'react-hook-form';
+import { Link } from 'react-router-dom';
 
 export type SignUpData = {
     email: string;
@@ -60,7 +61,11 @@ const RegisterForm: FC = () => {
                 {errors.confirmPassword && <span className='form-text required'>{errors.confirmPassword.message}</span>}
             </div>
             <div className='buttons'>
-                <input className='site-btn btn-orange' type='submit' value='Pošlji' />
+                <input className='site-btn btn-orange' type='submit' value='Sign up' />
+            </div>
+            <div className="goto-login">
+                <p>Already have an account?</p>
+                <Link to="/login" className="orange">Sign in</Link>
             </div>
         </form>
     )
