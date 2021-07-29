@@ -1,0 +1,26 @@
+.form {
+  .row .col:first-child {
+    padding-right: 0;
+  }
+  .form-element {
+    margin-bottom: 1rem;
+    .form-label {
+      font-size: 0.75rem;
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+    .form-control {
+      border-radius: 32px;
+      border: 2px solid $orange;
+      padding: 8px 30px 8px 24px;
+      height: 40px;
+      &:focus {
+        box-shadow: none;
+      }
+    }
+    .form-text {
+      font-size: 0.75rem;
+      color: $red;
+    }
+  }
+}
