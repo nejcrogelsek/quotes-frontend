@@ -3,11 +3,6 @@
     box-shadow: none;
   }
 }
-.navbar-toggler:not(.collapsed) ~ .add-quote,
-.navbar-toggler:not(.collapsed) ~ .navbar-brand {
-  opacity: 0;
-  pointer-events: none;
-}
 .navbar {
   min-height: 96px;
   padding: 30px 35px;
@@ -23,6 +18,20 @@
   > a {
     margin: 0;
     padding: 0;
+  }
+}
+.navbar-collapsible {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: $white;
+  width: 100%;
+  transition: 0.35s ease-in-out;
+  transform: translateY(0);
+  padding: 30px 35px;
+  box-shadow: 0 0 8px rgba($color: $dark, $alpha: 0.15);
+  &.collapsible {
+    transform: translateY(-100%);
   }
 }
 .navbar .navbar-nav {
