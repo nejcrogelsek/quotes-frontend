@@ -1,11 +1,10 @@
 import { FC, useEffect, useState } from 'react'
 import { Logo } from '..'
 import { Menu, Add } from '@material-ui/icons'
-import MobileNav from './MobileNav'
-import DesktopNav from './DesktopNav'
+import { DesktopNav, MobileNav } from ".."
 
 const Header: FC = () => {
-    const [isAuthenticated, setIsAuthenticated] = useState(true);
+    const [isAuthenticated, setIsAuthenticated] = useState(false);
     const [isMobile, setIsMobile] = useState(true);
     const [toggle, setToggle] = useState(false);
 

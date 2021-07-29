@@ -82,6 +82,7 @@ body {
   font-size: 1rem;
   font-family: $fonts;
   list-style: none;
+  color: $dark;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -115,4 +116,15 @@ img {
     color: $orange;
     border: 2px solid $orange;
   }
+}
+h1.page-title {
+  font-size: 2.1875rem;
+  font-weight: 400;
+  > span {
+    color: $orange;
+  }
+}
+.login-page ~ .footer,
+.register-page ~ .footer {
+  display: none;
 }

@@ -1,10 +1,10 @@
 import { FC } from 'react'
 
-const Footer:FC = () => {
+const Footer: FC = () => {
     return (
-        <div className="footer">
+        <footer className="footer">
             footer
-        </div>
+        </footer>
     )
 }
 
