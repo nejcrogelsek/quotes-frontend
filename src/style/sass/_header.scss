@@ -56,9 +56,13 @@
       border: none;
       width: 100%;
       text-align: left;
-      color: $orange;
-      > svg > path {
-        fill: $orange;
+    }
+    &:last-child {
+      button.nav-link {
+        color: $orange;
+        > svg > path {
+          fill: $orange;
+        }
       }
     }
   }
@@ -77,6 +81,66 @@
           width: 48px;
           height: 48px;
           margin-right: 32px;
+        }
+      }
+    }
+  }
+}
+@media #{$large} {
+  .navbar {
+    box-shadow: none;
+  }
+  .navbar .navbar-nav {
+    align-items: center;
+    > li {
+      &:first-child {
+        margin: 0 31px 0 0;
+        width: 137px;
+      }
+      &:nth-child(2) {
+        margin-bottom: 0;
+        width: 137px;
+      }
+      .nav-link {
+        color: $dark;
+        font-size: 1.5rem;
+        padding: 0;
+        > span {
+          width: calc(100% - 25px);
+          display: inline-block;
+        }
+      }
+      button.nav-link {
+        background: transparent;
+        border: none;
+        width: 100%;
+        text-align: left;
+      }
+      &:last-child {
+        button.nav-link {
+          color: $orange;
+          > svg > path {
+            fill: $orange;
+          }
+        }
+      }
+    }
+    &.isAuth {
+      > li {
+        margin-bottom: 48px;
+        &:last-child {
+          margin-bottom: 18px;
+        }
+        &.user-item {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          font-size: 1.5rem;
+          .MuiAvatar-root {
+            width: 48px;
+            height: 48px;
+            margin-right: 32px;
+          }
         }
       }
     }
