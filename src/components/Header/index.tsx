@@ -1,10 +1,11 @@
 import { FC, useEffect, useState } from 'react'
 import { Logo } from '..'
 import { Menu, Add } from '@material-ui/icons'
-import { DesktopNav, MobileNav } from ".."
+import { DesktopNav, MobileNav } from '..'
+import { AddQuoteModal, SettingsModal } from '..'
 
 const Header: FC = () => {
-    const [isAuthenticated, setIsAuthenticated] = useState(false);
+    const [isAuthenticated, setIsAuthenticated] = useState(true);
     const [isMobile, setIsMobile] = useState(true);
     const [toggle, setToggle] = useState(false);
 
@@ -18,9 +19,9 @@ const Header: FC = () => {
 
     useEffect(() => {
         checkIfMobile();
-        window.addEventListener("resize", checkIfMobile);
+        window.addEventListener('resize', checkIfMobile);
         return () => {
-            window.removeEventListener("resize", checkIfMobile);
+            window.removeEventListener('resize', checkIfMobile);
         };
     }, []);
 
@@ -29,24 +30,28 @@ const Header: FC = () => {
     }
 
     return (
-        <nav className='navbar navbar-expand-lg' aria-label='Fourth navbar example'>
-            <div className='container-fluid'>
-                <div className="header-buttons">
-                    <button onClick={() => toggleNav()} className='navbar-toggler collapsed' type='button'>
-                        <Menu />
-                    </button>
-                    <Logo />
-                    {isAuthenticated && isMobile ?
-                        <button className='navbar-toggler add-quote' type='button'>
-                            <Add />
-                        </button> : null}
+        <>
+            <nav className='navbar navbar-expand-lg' aria-label='Fourth navbar example'>
+                <div className='container-fluid'>
+                    <div className='header-buttons'>
+                        <button onClick={() => toggleNav()} className='navbar-toggler collapsed' type='button'>
+                            <Menu />
+                        </button>
+                        <Logo />
+                        {isAuthenticated && isMobile ?
+                            <button className='navbar-toggler add-quote' type='button' data-bs-toggle='modal' data-bs-target='#addQuoteModal'>
+                                <Add />
+                            </button> : null}
+                    </div>
+                    {isMobile ?
+                        <MobileNav isAuthenticated={isAuthenticated} toggleNav={toggleNav} toggle={toggle} />
+                        : <DesktopNav isAuthenticated={isAuthenticated} />
+                    }
                 </div>
-                {isMobile ?
-                    <MobileNav isAuthenticated={isAuthenticated} toggleNav={toggleNav} toggle={toggle} />
-                    : <DesktopNav isAuthenticated={isAuthenticated} />
-                }
-            </div>
-        </nav>
+            </nav>
+            <AddQuoteModal />
+            <SettingsModal />
+        </>
     )
 }
 

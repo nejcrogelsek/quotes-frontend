@@ -27,7 +27,7 @@ const DesktopNav: FC<Props> = ({ isAuthenticated }: Props) => {
                         </NavLink>
                     </li>
                     <li className='nav-item'>
-                        <button className='nav-link' >
+                        <button className='nav-link' type='button' data-bs-toggle='modal' data-bs-target='#settingsModal'>
                             <span>Settings</span>
                         </button>
                     </li>
@@ -42,7 +42,7 @@ const DesktopNav: FC<Props> = ({ isAuthenticated }: Props) => {
                         </NavLink>
                     </li>
                     <li className='nav-item'>
-                        <button className='add-quote' type='button'>
+                        <button className='add-quote' type='button' data-bs-toggle='modal' data-bs-target='#addQuoteModal'>
                             <Add />
                         </button>
                     </li>
