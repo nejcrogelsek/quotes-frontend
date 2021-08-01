@@ -30,6 +30,7 @@
   transform: translateY(0);
   padding: 30px 35px;
   box-shadow: 0 0 8px rgba($color: $dark, $alpha: 0.15);
+  z-index: 100;
   &.collapsible {
     transform: translateY(-100%);
   }

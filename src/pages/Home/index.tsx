@@ -1,9 +1,12 @@
 import { FC } from 'react'
+import { Hero } from '../../components'
 
 const Home: FC = () => {
     return (
         <div className="home-page">
-            Home
+            <div className="container-lg">
+                <Hero />
+            </div>
         </div>
     )
 }

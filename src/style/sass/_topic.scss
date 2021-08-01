@@ -33,3 +33,49 @@
     }
   }
 }
+.home-page {
+  > div {
+    padding: 50px 35px 0;
+  }
+}
+/* Hero */
+.hero-page {
+  .row .col-lg-6 {
+    &:first-child {
+      padding: 0;
+    }
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+  h1 {
+    margin-bottom: 1rem;
+    > span {
+      display: block;
+      color: $dark;
+      > span {
+        color: $orange;
+      }
+    }
+  }
+  p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    max-width: 530px;
+  }
+}
+@media #{$large} {
+  .hero-page {
+    h1 {
+      font-size: 5.125rem;
+    }
+  }
+}
+@media #{$xxlarge} {
+  .hero-page {
+    h1 {
+      font-size: 6.125rem;
+    }
+  }
+}
