@@ -112,7 +112,6 @@ a {
   border-radius: 32px;
   height: 40px;
   line-height: 24px;
-  border: 2px solid transparent;
   &.active:focus,
   &:focus {
     box-shadow: none;
@@ -120,11 +119,12 @@ a {
   &.btn-orange {
     background: $orangeLinear;
     color: $white;
+    border: none;
   }
   &.btn-light {
     background: $white;
     color: $orange;
-    border-color: $orange;
+    border: 2px solid $orange;
   }
 }
 .page-title {
