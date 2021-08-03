@@ -1,6 +1,5 @@
 import { FC } from 'react'
 import { RegisterForm } from '../../components'
-import QuotesUrl from '../../assets/images/quotes.svg'
 
 const Register: FC = () => {
     return (
