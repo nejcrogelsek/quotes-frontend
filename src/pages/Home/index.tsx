@@ -1,16 +1,10 @@
 import { FC, useState } from 'react'
 import { Hero, MostLiked, QuoteBlock, MostRecent } from '../../components'
-import TopRight from '../../assets/images/vector_top_right.png'
-import MiddleLeft from '../../assets/images/vector_middle_left.png'
-import MiddleRight from '../../assets/images/vector_middle_right.png'
 
 const Home: FC = () => {
     const [isAuthenticated, setIsAuthenticated] = useState(false);
     return (
         <div className='home-page'>
-            <img src={TopRight} alt='' />
-            <img src={MiddleLeft} alt='' />
-            <img src={MiddleRight} alt='' />
             <div className='container-lg'>
                 {isAuthenticated ?
                     <>

@@ -148,6 +148,25 @@
 .homepage-most-recent {
   margin: 69px 0 120px;
 }
+// Background images
+.background-image1,
+.background-image2,
+.background-image3 {
+  position: absolute;
+  z-index: -1;
+  &.background-image1 {
+    top: 0;
+    right: 0;
+  }
+  &.background-image2 {
+    top: 0;
+    left: 0;
+  }
+  &.background-image3 {
+    top: 0;
+    right: 0;
+  }
+}
 @media #{$large} {
   .home-page {
     .explore-title {
@@ -192,6 +211,19 @@
   }
   .homepage-most-recent {
     margin: 128px 0 182px;
+  }
+  .background-image1,
+  .background-image2,
+  .background-image3 {
+    &.background-image1 {
+      top: 0;
+    }
+    &.background-image2 {
+      top: 400px;
+    }
+    &.background-image3 {
+      top: 550px;
+    }
   }
 }
 @media #{$xxlarge} {
