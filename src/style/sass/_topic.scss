@@ -33,6 +33,7 @@
     }
   }
 }
+/* Home */
 .home-page {
   > div {
     padding: 50px 35px 0;
@@ -44,14 +45,6 @@
     > span {
       display: block;
       color: $orange;
-    }
-  }
-}
-@media #{$large} {
-  .home-page {
-    .explore-title {
-      margin-top: 174px;
-      font-size: 3.8125rem;
     }
   }
 }
@@ -82,7 +75,56 @@
     max-width: 530px;
   }
 }
+/* QuoteBlock */
+.quote-block {
+  padding: 1rem;
+  border-radius: 1rem;
+  width: 100%;
+  height: 168px;
+  margin: 1rem auto 0 auto;
+  max-width: 420px;
+  display: flex;
+  padding: 4px 2rem 1rem 1rem;
+  float: left;
+  .voting {
+    display: flex;
+    width: 27px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    > button {
+      background: transparent;
+      border: none;
+    }
+  }
+  .quote-part {
+    display: flex;
+    flex-direction: column;
+    padding-left: 21px;
+    width: 268px;
+    .quote-text {
+      font-size: 1rem;
+      margin-bottom: 13px;
+      line-height: 18.78px; // line-height: 1.17;
+    }
+    .quote-user {
+      display: flex;
+      align-items: center;
+      margin-left: -8px;
+      .quote-username {
+        font-size: 0.75rem;
+        margin-left: 2px;
+      }
+    }
+  }
+}
 @media #{$large} {
+  .home-page {
+    .explore-title {
+      margin-top: 174px;
+      font-size: 3.8125rem;
+    }
+  }
   .hero-section {
     h1 {
       font-size: 5.125rem;

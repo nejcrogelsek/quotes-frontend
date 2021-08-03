@@ -10,7 +10,6 @@ const Register: FC = () => {
                 <p>Your name will appear on quotes and your public profile.</p>
                 <RegisterForm />
             </div>
-            <img className='background-image' src={QuotesUrl} alt='Quotes' />
         </div>
     )
 }
