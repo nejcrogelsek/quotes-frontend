@@ -120,26 +120,33 @@
 .homepage-most-recent,
 .homepage-most-liked {
   text-align: center;
+  margin-top: 64px;
   > h2 {
-    margin: 64px 0 1rem;
+    margin-bottom: 1rem;
     font-size: 1.5rem;
   }
   > p {
     font-size: 1rem;
+    max-width: 524px;
+    margin: 0 auto 48px;
   }
   .quotes-wrap {
     text-align: left;
     > div {
-      margin: 0 0 19px 0;
+      margin: 0 auto 19px auto;
     }
   }
   .load-more {
     width: 148px;
     margin: 2rem auto 0;
   }
+  .signup {
+    width: 184px;
+  }
 }
+.homepage-most-liked.signup,
 .homepage-most-recent {
-  margin-top: 69px;
+  margin: 69px 0 120px;
 }
 @media #{$large} {
   .home-page {
@@ -154,9 +161,13 @@
     }
   }
   .homepage-most-liked {
+    margin-top: 124px;
     > h2 {
-      margin: 127px 0 1rem;
+      margin-bottom: 1rem;
       font-size: 1.5rem;
+    }
+    > p {
+      margin: 0 auto 38px;
     }
     .load-more {
       width: 148px;
@@ -164,7 +175,7 @@
     }
   }
   .homepage-most-recent {
-    margin-top: 128px;
+    margin: 128px 0 182px;
   }
 }
 @media #{$xxlarge} {

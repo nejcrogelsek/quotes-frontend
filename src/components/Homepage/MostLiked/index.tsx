@@ -1,9 +1,14 @@
 import { FC } from 'react'
+import { Link } from 'react-router-dom'
 import { QuoteBlock } from '../..'
 
-const MostLiked: FC = () => {
+interface Props {
+    text: string;
+}
+
+const MostLiked: FC<Props> = ({ text }: Props) => {
     return (
-        <div className='homepage-most-liked'>
+        <div className={text === 'signup' ? 'homepage-most-liked signup' : 'homepage-most-liked'}>
             <h2 className='page-title secondary'>Most liked quotes</h2>
             <p>Most liked quotes on the platform.  Sign up or login to like the quotes  and keep them saved in your profile.</p>
             <div className='quotes-wrap'>
@@ -12,7 +17,7 @@ const MostLiked: FC = () => {
                 <QuoteBlock />
                 <QuoteBlock />
             </div>
-            <button className='btn site-btn btn-light load-more'>Load more</button>
+            {text === 'signup' ? <Link to='signup' className='btn site-btn btn-light signup'>Sign up to see more</Link> : <button className='btn site-btn btn-light load-more'>Load more</button>}
         </div>
     )
 }
