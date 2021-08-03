@@ -84,7 +84,7 @@
   margin: 2rem auto 0 auto;
   max-width: 420px;
   display: flex;
-  padding: 4px 2rem 1rem 1rem;
+  padding: 1rem 2rem 1rem 1rem;
   .voting {
     display: flex;
     width: 27px;
@@ -117,14 +117,21 @@
     }
   }
 }
-.most-liked-title {
-  margin: 64px 0 1rem;
-  font-size: 1.5rem;
-  text-align: center;
-}
-.most-liked-text {
-  font-size: 1rem;
-  text-align: center;
+.homepage-most-liked {
+  > h2 {
+    margin: 64px 0 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  > p {
+    font-size: 1rem;
+    text-align: center;
+  }
+  .quotes-wrap {
+    > div {
+      margin: 0 0 19px 0;
+    }
+  }
 }
 @media #{$large} {
   .home-page {
@@ -138,12 +145,11 @@
       font-size: 5.125rem;
     }
   }
-  .most-liked-title {
-    margin: 127px 0 1rem;
-    font-size: 1.5rem;
-  }
-  .most-liked-text {
-    font-size: 1rem;
+  .homepage-most-liked {
+    > h2 {
+      margin: 127px 0 1rem;
+      font-size: 1.5rem;
+    }
   }
 }
 @media #{$xxlarge} {
