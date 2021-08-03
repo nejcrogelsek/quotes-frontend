@@ -1,11 +1,11 @@
 import { FC } from 'react'
 import { QuoteBlock } from '../..'
 
-const MostLiked: FC = () => {
+const MostRecent: FC = () => {
     return (
-        <div className='homepage-most-liked'>
+        <div className='homepage-most-recent'>
             <h2 className='page-title secondary'>Most liked quotes</h2>
-            <p>Most liked quotes on the platform.  Sign up or login to like the quotes  and keep them saved in your profile.</p>
+            <p>Recent quotes updates as soon user adds new quote. Go ahead show them that you seen the new quote and like the ones you like.</p>
             <div className='quotes-wrap'>
                 <QuoteBlock />
                 <QuoteBlock />
@@ -17,4 +17,4 @@ const MostLiked: FC = () => {
     )
 }
 
-export default MostLiked
+export default MostRecent

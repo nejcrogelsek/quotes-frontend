@@ -117,21 +117,29 @@
     }
   }
 }
+.homepage-most-recent,
 .homepage-most-liked {
+  text-align: center;
   > h2 {
     margin: 64px 0 1rem;
     font-size: 1.5rem;
-    text-align: center;
   }
   > p {
     font-size: 1rem;
-    text-align: center;
   }
   .quotes-wrap {
+    text-align: left;
     > div {
       margin: 0 0 19px 0;
     }
   }
+  .load-more {
+    width: 148px;
+    margin: 2rem auto 0;
+  }
+}
+.homepage-most-recent {
+  margin-top: 69px;
 }
 @media #{$large} {
   .home-page {
@@ -150,6 +158,13 @@
       margin: 127px 0 1rem;
       font-size: 1.5rem;
     }
+    .load-more {
+      width: 148px;
+      margin: 48px auto 0;
+    }
+  }
+  .homepage-most-recent {
+    margin-top: 128px;
   }
 }
 @media #{$xxlarge} {

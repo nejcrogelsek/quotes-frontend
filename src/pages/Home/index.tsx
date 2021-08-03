@@ -1,5 +1,5 @@
 import { FC, useState } from 'react'
-import { Hero, MostLiked, QuoteBlock } from '../../components'
+import { Hero, MostLiked, QuoteBlock, MostRecent } from '../../components'
 
 const Home: FC = () => {
     const [isAuthenticated, setIsAuthenticated] = useState(true);
@@ -12,6 +12,7 @@ const Home: FC = () => {
                         <p className='site-text'>Quote of the day is randomly choosen quote.</p>
                         <QuoteBlock />
                         <MostLiked />
+                        <MostRecent />
                     </>
                     :
                     <>
