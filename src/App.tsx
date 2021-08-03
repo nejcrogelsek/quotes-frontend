@@ -9,9 +9,6 @@ import MiddleRight from './assets/images/vector_middle_right.png'
 const App: FC = () => {
   return (
     <Router>
-      <img className='background-image1' src={TopRight} alt='' />
-      <img className='background-image2' src={MiddleLeft} alt='' />
-      <img className='background-image3' src={MiddleRight} alt='' />
       <Header />
       <Switch>
         <PublicRoute exact path='/' component={Home} />
@@ -19,6 +16,9 @@ const App: FC = () => {
         <PublicRoute exact path='/signup' component={Register} />
       </Switch>
       <Footer />
+      <img className='background-image1' src={TopRight} alt='' />
+      <img className='background-image2' src={MiddleLeft} alt='' />
+      <img className='background-image3' src={MiddleRight} alt='' />
     </Router>
   )
 }

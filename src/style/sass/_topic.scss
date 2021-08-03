@@ -19,6 +19,10 @@
     left: 0;
   }
 }
+.register-page ~ img,
+.login-page ~ img {
+  display: none;
+}
 /* Modals */
 .modal {
   padding-top: 95px;
@@ -84,6 +88,7 @@
   max-width: 420px;
   display: flex;
   padding: 1rem 2rem 1rem 1rem;
+  background: $white;
   .voting {
     display: flex;
     width: 27px;
@@ -154,6 +159,7 @@
 .background-image3 {
   position: absolute;
   z-index: -1;
+
   &.background-image1 {
     top: 0;
     right: 0;
@@ -217,12 +223,15 @@
   .background-image3 {
     &.background-image1 {
       top: 0;
+      right: 0;
     }
     &.background-image2 {
       top: 400px;
+      left: 0;
     }
     &.background-image3 {
       top: 550px;
+      right: 0;
     }
   }
 }
