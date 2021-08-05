@@ -43,6 +43,12 @@ Full-stack application that will allow the user to register, write one paragraph
 
 ## How To Use
 
+Clone repository and run:
+
+```bash
+$ yarn install
+```
+
 In the project directory, you can run:
 
 ```bash
