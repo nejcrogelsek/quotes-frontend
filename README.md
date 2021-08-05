@@ -1,12 +1,53 @@
-# Getting Started with Create React App
+# Quotastic
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+### Table of Contents
+
+- [Description](#description)
+- [How To Use](#how-to-use)
+- [References](#references)
+- [License](#license)
+- [Author Info](#author-info)
+
+---
+
+## Description
+
+Full-stack application that will allow the user to register, write one paragraph of motivational quote, review already registered users and their quotes, and upvote or downvote a quote.
+
+#### Technologies
+
+- HTML
+- CSS
+- Bootstrap
+- Figma
+- JavaScript
+- Typescript
+- Node
+- NestJS
+- Express
+- React
+- Docker
+- AWS
+- Git
+- Github
+- PostgreSQL
+- TypeORM
+- JWT
+- Postman
+
+[Back To The Top](#Quotastic)
+
+---
+
+## How To Use
 
 In the project directory, you can run:
 
-### `yarn start`
+```bash
+$ yarn start
+```
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -14,12 +55,16 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `yarn test`
+```bash
+$ yarn test
+```
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+```bash
+$ yarn build
+```
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
@@ -29,18 +74,38 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
+## References
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- SkillUp Mentor - [skillupmentor](https://skillupmentor.com/)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- LinkedIn - [@nejcrogelsek](https://www.linkedin.com/in/nejcrogelsek/)
+- Github - [@nejcrogelsek](https://github.com/nejcrogelsek)
+- Website - [Nejc Rogelšek](https://nejcrogelsek.si)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+[Back To The Top](#Quotastic)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+---
 
-## Learn More
+## License
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+MIT License
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Copyright (c) 2021 [skillupmentor](https://skillupmentor.com/)
+
+This assignment is protected with XYZ copyright. The Candidate may
+upload the assignment on his closed profile on GitHub (or other
+platform), but any other reproduction and distribution of the
+assignment itself or the assignment’s solutions without written
+permission of XYZ is prohibited.
+
+[Back To The Top](#Quotastic)
+
+---
+
+## Author Info
+
+- LinkedIn - [@nejcrogelsek](https://www.linkedin.com/in/nejcrogelsek/)
+- Github - [@nejcrogelsek](https://github.com/nejcrogelsek)
+- Website - [Nejc Rogelšek](https://nejcrogelsek.si)
+
+[Back To The Top](#Quotastic)
