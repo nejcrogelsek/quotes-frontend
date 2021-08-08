@@ -178,9 +178,7 @@
   margin: 69px 0 120px;
 }
 // Background images
-.background-image1,
-.background-image2,
-.background-image3 {
+.background-image {
   position: absolute;
   z-index: -1;
 
@@ -196,6 +194,11 @@
     top: 1280px;
     right: 0;
   }
+}
+.profile-page ~ .background-image {
+  display: none;
+}
+.profile-page {
 }
 @media #{$large} {
   .home-page {
@@ -254,9 +257,7 @@
   .homepage-most-recent {
     margin: 128px 0 182px;
   }
-  .background-image1,
-  .background-image2,
-  .background-image3 {
+  .background-image {
     &.background-image1 {
       top: 0;
       right: 0;
@@ -270,11 +271,21 @@
       right: 0;
     }
   }
+  .profile-page .page-title-h3 {
+    color: $dark !important;
+  }
 }
 @media #{$xxlarge} {
   .hero-section {
     h1 {
       font-size: 6.125rem;
+    }
+  }
+  .homepage-most-liked {
+    .quotes-wrap {
+      > div {
+        width: 100%;
+      }
     }
   }
 }

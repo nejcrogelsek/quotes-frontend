@@ -145,6 +145,9 @@ a {
     color: $orange;
   }
 }
+.page-title-h3 {
+  font-size: 1.5rem;
+}
 @media #{$large} {
   .page-title.secondary {
     font-size: 2.1875rem;
