@@ -130,7 +130,7 @@
     border-radius: 8px;
     filter: blur(4px);
     width: 85%;
-    @media (min-width: 450px) {
+    @media (min-width: 413px) {
       width: 302px;
     }
     &:nth-child(2) {
@@ -185,15 +185,15 @@
   z-index: -1;
 
   &.background-image1 {
-    top: 0;
+    top: 585px;
     right: 0;
   }
   &.background-image2 {
-    top: 0;
+    top: 1000px;
     left: 0;
   }
   &.background-image3 {
-    top: 0;
+    top: 1280px;
     right: 0;
   }
 }
