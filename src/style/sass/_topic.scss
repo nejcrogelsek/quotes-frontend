@@ -84,13 +84,19 @@
 .quote-block {
   padding: 1rem;
   border-radius: 1rem;
-  width: 344px;
+  width: 100%;
   margin: 2rem auto 0 auto;
   max-width: 420px;
   display: flex;
   padding: 1rem 2rem 1rem 1rem;
   background: $white;
   box-shadow: 0px 0px 8px rgba($color: $black, $alpha: 0.15);
+  @media (min-width: 413px) {
+    width: 344px;
+  }
+  @media #{$small} {
+    width: 100%;
+  }
   .voting {
     display: flex;
     width: 27px;
@@ -107,7 +113,7 @@
     flex-direction: column;
     justify-content: center;
     padding-left: 21px;
-    width: 268px;
+    width: 100%;
     .quote-text {
       font-size: 1rem;
       margin-bottom: 13px;
@@ -116,10 +122,9 @@
     .quote-user {
       display: flex;
       align-items: center;
-      margin-left: -8px;
       .quote-username {
         font-size: 0.75rem;
-        margin-left: 2px;
+        margin-left: 10px;
       }
     }
   }
@@ -199,6 +204,68 @@
   display: none;
 }
 .profile-page {
+  .profile-banner {
+    height: 315px;
+    background-image: url(../../assets/images/profile_banner.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    .content {
+      padding-top: 56px;
+      margin-bottom: 24px;
+      > .MuiAvatar-root {
+        margin: 0 auto;
+        width: 64px;
+        height: 64px;
+        margin-bottom: 24px;
+      }
+      .quote-block.quote-block-mini {
+        width: 214px;
+        padding: 1rem 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        > p {
+          margin: 0;
+        }
+        > span {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+  .my-quote {
+    margin: 40px auto 48px auto;
+    max-width: 420px;
+    width: 100%;
+    > h3 {
+      text-indent: 20px;
+    }
+    .quote-block {
+      position: relative;
+      .remove-quote {
+        position: absolute;
+        right: 24px;
+        top: 50%;
+        transform: translate(0, -50%);
+        background: transparent;
+        border: none;
+        color: $orange;
+      }
+    }
+  }
+}
+.profile-most-liked {
+  > h3 {
+    max-width: 420px;
+    margin: 0 auto;
+    text-indent: 20px;
+  }
+  .load-more {
+    display: block;
+    width: 148px;
+    margin: 2rem auto 120px;
+  }
 }
 @media #{$large} {
   .home-page {
@@ -237,7 +304,7 @@
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
-      max-height: 735px;
+      max-height: 625px;
       > div {
         margin: 0 0 19px 0;
         width: calc(100% / 3 - 40px);
@@ -271,8 +338,28 @@
       right: 0;
     }
   }
-  .profile-page .page-title-h3 {
-    color: $dark !important;
+  .profile-page {
+    .profile-banner {
+      height: 415px;
+      .content {
+        padding-top: 112px;
+      }
+    }
+    .my-quote {
+      margin: 50px auto 71px auto;
+    }
+    .profile-most-liked {
+      > h3 {
+        max-width: 100%;
+        margin: auto;
+        text-indent: 20px;
+        color: $dark !important;
+      }
+      .quotes-wrap {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
   }
 }
 @media #{$xxlarge} {

@@ -24,14 +24,14 @@ const ProfileMostLiked: FC = () => {
     let loop: number = 0;
 
     return (
-        <div className='profile-most-liked signup'>
+        <div className='profile-most-liked'>
             <h3 className='page-title-h3 orange'>Likes</h3>
             <div className='quotes-wrap'>
                 {quotes.map(quote => {
                     loop++;
                     if (isMobile === true && loop < 5) {
                         return <QuoteBlock key={quote.id} votes={quote.votes} username={quote.username} image_url={quote.image_url} quote={quote.quote} />
-                    } else if (isMobile === false && loop < 10) {
+                    } else if (isMobile === false && loop < 7) {
                         return <QuoteBlock key={quote.id} votes={quote.votes} username={quote.username} image_url={quote.image_url} quote={quote.quote} />
                     } else {
                         return null
