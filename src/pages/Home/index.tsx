@@ -2,7 +2,7 @@ import { FC, useState } from 'react'
 import { Hero, MostLiked, QuoteBlock, MostRecent } from '../../components'
 
 const Home: FC = () => {
-    const [isAuthenticated, setIsAuthenticated] = useState(false);
+    const [isAuthenticated, setIsAuthenticated] = useState(true);
     return (
         <div className='home-page'>
             <div className='container-lg'>
