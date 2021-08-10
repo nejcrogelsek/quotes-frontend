@@ -5,7 +5,7 @@ import { DesktopNav, MobileNav } from '..'
 import { AddQuoteModal, SettingsModal } from '..'
 
 const Header: FC = () => {
-    const [isAuthenticated, setIsAuthenticated] = useState(true);
+    const [isAuthenticated, setIsAuthenticated] = useState(false);
     const [isMobile, setIsMobile] = useState(true);
     const [toggle, setToggle] = useState(false);
 
