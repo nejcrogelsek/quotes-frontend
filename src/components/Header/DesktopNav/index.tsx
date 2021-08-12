@@ -1,5 +1,5 @@
 import { Avatar } from '@material-ui/core'
-import { Add, Close } from '@material-ui/icons'
+import { Add } from '@material-ui/icons'
 import { FC } from 'react'
 import { NavLink, useHistory } from 'react-router-dom'
 import profileUrl from '../../../assets/images/profile_picture.png'

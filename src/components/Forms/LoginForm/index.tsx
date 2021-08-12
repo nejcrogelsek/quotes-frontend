@@ -1,10 +1,8 @@
 import { FC } from 'react';
 import { useForm } from 'react-hook-form';
+import { SignInData } from '../../../interfaces/auth.interface';
 
-export type SignInData = {
-    email: string;
-    password: string;
-}
+
 
 const LoginForm: FC = () => {
     const { register, handleSubmit, formState: { errors }, reset } = useForm<SignInData>();

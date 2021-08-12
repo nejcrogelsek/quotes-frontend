@@ -1,15 +1,8 @@
 import { FC } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link, useLocation } from 'react-router-dom';
-import axios from '../../../axios';
-
-export type SignUpData = {
-    email: string;
-    first_name: string;
-    last_name: string;
-    password: string;
-    confirm_password: string;
-}
+import axios from '../../../api/axios';
+import { SignUpData } from '../../../interfaces/auth.interface';
 
 const RegisterForm: FC = () => {
     const location = useLocation();
