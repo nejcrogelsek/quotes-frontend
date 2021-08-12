@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form';
 import { Link, useLocation } from 'react-router-dom';
 import axios from '../../../api/axios';
 import { SignUpData } from '../../../interfaces/auth.interface';
+import { ToastContainer, toast } from 'react-toastify';
 
 const RegisterForm: FC = () => {
     const location = useLocation();
@@ -17,25 +18,30 @@ const RegisterForm: FC = () => {
 
     const signup = async (createUserDto: SignUpData): Promise<any> => {
         try {
-            // get secure url from our server
-            const { data } = await axios.get('users/upload');
+            if (createUserDto.password.match(/((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/) && createUserDto.password === createUserDto.confirm_password) {
+                // get secure url from our server
+                const { data } = await axios.get('users/upload');
 
-            // post the image directly to the s3 bucket
-            await axios.put(data.url, file, { headers: { 'Content-Type': 'multipart/form-data' } });
-            const imageUrl = data.url.split('?');
-            console.log(data.url);
-            console.log(imageUrl[0]);
-            const finalData = {
-                profile_image: imageUrl[0],
-                email: createUserDto.email,
-                first_name: createUserDto.first_name,
-                last_name: createUserDto.last_name,
-                password: createUserDto.password,
-                confirm_password: createUserDto.confirm_password,
+                // post the image directly to the s3 bucket
+                await axios.put(data.url, file, { headers: { 'Content-Type': 'multipart/form-data' } });
+                const imageUrl = data.url.split('?');
+                console.log(data.url);
+                console.log(imageUrl[0]);
+                const finalData = {
+                    profile_image: imageUrl[0],
+                    email: createUserDto.email,
+                    first_name: createUserDto.first_name,
+                    last_name: createUserDto.last_name,
+                    password: createUserDto.password,
+                    confirm_password: createUserDto.confirm_password,
+                }
+                await axios.post('/users/create', finalData).then((res) => {
+                    console.log(res.data);
+                });
+            } else {
+                toast.error('Passwords do not match. Password must have at least 1 upper & lower case letter, 1 number or special character and it must be long more than 5 characters.')
             }
-            await axios.post('/users/create', finalData).then((res) => {
-                console.log(res.data);
-            });
+
         } catch (err) {
             console.log('ERROR MESSAGE:', err);
         }
@@ -48,6 +54,7 @@ const RegisterForm: FC = () => {
 
     return (
         <>
+            <ToastContainer />
             <form onSubmit={onSubmit} className='form'>
                 <div className='form-element image'>
                     <label htmlFor='file' className='form-label'><Avatar /></label>
@@ -55,7 +62,7 @@ const RegisterForm: FC = () => {
                 </div>
                 <div className='form-element'>
                     <label htmlFor='email' className='form-label'>Email</label>
-                    <input {...register('email', { required: 'Email is required' })} type='text' name='email' className='form-control' />
+                    <input {...register('email', { required: 'Email is required' })} type='email' name='email' className='form-control' />
                     {errors.email && <span className='form-text required'>{errors.email.message}</span>}
                 </div>
                 <div className="row">
@@ -76,12 +83,12 @@ const RegisterForm: FC = () => {
                 </div>
                 <div className='form-element'>
                     <label htmlFor='password' className='form-label'>Password</label>
-                    <input {...register('password', { required: 'Password is required' })} type='text' name='password' className='form-control' />
+                    <input {...register('password', { required: 'Password is required', pattern: /((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/ })} type='password' name='password' className='form-control' />
                     {errors.password && <span className='form-text required'>{errors.password.message}</span>}
                 </div>
                 <div className='form-element'>
                     <label htmlFor='confirm_password' className='form-label'>Confirm password</label>
-                    <input {...register('confirm_password', { required: 'Please confirm password' })} type='text' name='confirm_password' className='form-control' />
+                    <input {...register('confirm_password', { required: 'Please confirm password', pattern: /((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/ })} type='password' name='confirm_password' className='form-control' />
                     {errors.confirm_password && <span className='form-text required'>{errors.confirm_password.message}</span>}
                 </div>
                 {location.pathname.slice(1, location.pathname.length) === 'signup' ?

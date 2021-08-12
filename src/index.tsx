@@ -1,5 +1,6 @@
 import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
+import "react-toastify/dist/ReactToastify.css";
 import './style/css/main.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
