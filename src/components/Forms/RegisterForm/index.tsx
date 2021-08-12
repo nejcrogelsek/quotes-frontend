@@ -7,7 +7,6 @@ import { SignUpData } from '../../../interfaces/auth.interface';
 
 const RegisterForm: FC = () => {
     const location = useLocation();
-    const [profileImageUrl, setProfileImageUrl] = useState<string>('');
     const [file, setFile] = useState<Blob | Uint8Array | ArrayBuffer | undefined>(undefined);
     const { register, handleSubmit, formState: { errors }, reset } = useForm<SignUpData>();
 
@@ -24,11 +23,10 @@ const RegisterForm: FC = () => {
             // post the image directly to the s3 bucket
             await axios.put(data.url, file, { headers: { 'Content-Type': 'multipart/form-data' } });
             const imageUrl = data.url.split('?');
-            setProfileImageUrl(imageUrl);
             console.log(data.url);
-            console.log(imageUrl);
+            console.log(imageUrl[0]);
             const finalData = {
-                profile_image: imageUrl,
+                profile_image: imageUrl[0],
                 email: createUserDto.email,
                 first_name: createUserDto.first_name,
                 last_name: createUserDto.last_name,
@@ -43,7 +41,7 @@ const RegisterForm: FC = () => {
         }
     }
 
-    const fileSelected = (e: any) => {
+    const fileSelected = async (e: any) => {
         const file: Blob | Uint8Array | ArrayBuffer = e.target.files[0];
         setFile(file)
     }
@@ -52,7 +50,7 @@ const RegisterForm: FC = () => {
         <>
             <form onSubmit={onSubmit} className='form'>
                 <div className='form-element image'>
-                    <label htmlFor='file' className='form-label'><Avatar src={profileImageUrl} /></label>
+                    <label htmlFor='file' className='form-label'><Avatar /></label>
                     <input type='file' accept='image/*' name='file' className='file-control' onChange={fileSelected} />
                 </div>
                 <div className='form-element'>
