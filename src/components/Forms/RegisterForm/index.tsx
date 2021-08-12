@@ -20,24 +20,28 @@ const RegisterForm: FC = () => {
         try {
             if (createUserDto.password.match(/((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/) && createUserDto.password === createUserDto.confirm_password) {
                 // get secure url from our server
-                const { data } = await axios.get('users/upload');
+                if (file !== undefined) {
+                    const { data } = await axios.get('users/upload');
 
-                // post the image directly to the s3 bucket
-                await axios.put(data.url, file, { headers: { 'Content-Type': 'multipart/form-data' } });
-                const imageUrl = data.url.split('?');
-                console.log(data.url);
-                console.log(imageUrl[0]);
-                const finalData = {
-                    profile_image: imageUrl[0],
-                    email: createUserDto.email,
-                    first_name: createUserDto.first_name,
-                    last_name: createUserDto.last_name,
-                    password: createUserDto.password,
-                    confirm_password: createUserDto.confirm_password,
+                    // post the image directly to the s3 bucket
+                    await axios.put(data.url, file, { headers: { 'Content-Type': 'multipart/form-data' } });
+                    const imageUrl = data.url.split('?');
+                    console.log(data.url);
+                    console.log(imageUrl[0]);
+                    const finalData = {
+                        profile_image: imageUrl[0],
+                        email: createUserDto.email,
+                        first_name: createUserDto.first_name,
+                        last_name: createUserDto.last_name,
+                        password: createUserDto.password,
+                        confirm_password: createUserDto.confirm_password,
+                    }
+                    await axios.post('/users/create', finalData).then((res) => {
+                        console.log(res.data);
+                    });
+                } else {
+                    toast.error('You need to upload a profile image.')
                 }
-                await axios.post('/users/create', finalData).then((res) => {
-                    console.log(res.data);
-                });
             } else {
                 toast.error('Passwords do not match. Password must have at least 1 upper & lower case letter, 1 number or special character and it must be long more than 5 characters.')
             }
