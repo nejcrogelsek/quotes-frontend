@@ -1,9 +1,6 @@
 import { FC } from 'react';
 import { useForm } from 'react-hook-form';
-
-export type AddQuoteData = {
-    message: string;
-}
+import { AddQuoteData } from '../../../interfaces/quote.interface';
 
 const AddQuoteForm: FC = () => {
     const { register, handleSubmit, formState: { errors }, reset } = useForm<AddQuoteData>();
