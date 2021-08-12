@@ -29,6 +29,35 @@
       height: 124px !important;
       resize: none;
     }
+    &.image {
+      position: relative;
+      margin: 0 auto 1rem;
+      width: 64px;
+      > input[type="file"] {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 10;
+        opacity: 0;
+        width: 64px;
+        height: 64px;
+        &:hover {
+          cursor: pointer;
+          + label {
+            &::before {
+              border-color: $black !important;
+            }
+          }
+        }
+      }
+      > label {
+        .MuiAvatar-root {
+          width: 64px;
+          height: 64px;
+          box-shadow: 0px 0px 8px rgba($color: $black, $alpha: 0.15);
+        }
+      }
+    }
   }
   .buttons {
     margin-bottom: 1rem;
