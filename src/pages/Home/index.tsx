@@ -1,12 +1,13 @@
-import { FC, useState } from 'react'
+import { FC, useContext } from 'react'
 import { Hero, MostLiked, QuoteBlock, MostRecent } from '../../components'
+import { UserContext } from '../../stores/user.context';
 
 const Home: FC = () => {
-    const [isAuthenticated, setIsAuthenticated] = useState(true);
+    const { userValue, setUserValue } = useContext(UserContext)
     return (
         <div className='home-page'>
             <div className='container-lg'>
-                {isAuthenticated ?
+                {userValue ?
                     <>
                         <h1 className='page-title text-center'><span>Quote of the day</span></h1>
                         <p className='site-text'>Quote of the day is randomly choosen quote.</p>

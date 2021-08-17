@@ -1,20 +1,30 @@
 import { Avatar, } from '@material-ui/core';
-import { FC, useState } from 'react';
+import { FC, useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, Redirect, useHistory, useLocation } from 'react-router-dom';
 import axios from '../../../api/axios';
 import { SignUpData } from '../../../interfaces/auth.interface';
 import { ToastContainer, toast } from 'react-toastify';
+import { UserContext } from '../../../stores/user.context';
 
 const RegisterForm: FC = () => {
+    const history = useHistory();
     const location = useLocation();
     const [file, setFile] = useState<Blob | Uint8Array | ArrayBuffer | undefined>(undefined);
     const { register, handleSubmit, formState: { errors }, reset } = useForm<SignUpData>();
-
+    const { userValue, setUserValue } = useContext(UserContext)
     const onSubmit = handleSubmit((data) => {
         signup(data);
         reset();
     })
+
+    const runLogoutTimer = (timer: number) => {
+        setTimeout(() => {
+            localStorage.removeItem('user');
+            setUserValue(null);
+            history.push('/');
+        }, timer);
+    }
 
     const signup = async (createUserDto: SignUpData): Promise<any> => {
         try {
@@ -26,8 +36,10 @@ const RegisterForm: FC = () => {
                     // post the image directly to the s3 bucket
                     await axios.put(data.url, file, { headers: { 'Content-Type': 'multipart/form-data' } });
                     const imageUrl = data.url.split('?');
-                    console.log(data.url);
-                    console.log(imageUrl[0]);
+                    // full url
+                    //console.log(data.url);
+                    // Image url
+                    //console.log(imageUrl[0]);
                     const finalData = {
                         profile_image: imageUrl[0],
                         email: createUserDto.email,
@@ -37,7 +49,9 @@ const RegisterForm: FC = () => {
                         confirm_password: createUserDto.confirm_password,
                     }
                     await axios.post('/users/create', finalData).then((res) => {
-                        console.log(res.data);
+                        setUserValue(res.data.user);
+                        localStorage.setItem('user', res.data.access_token);
+                        runLogoutTimer(900000);
                     });
                 } else {
                     toast.error('You need to upload a profile image.')
@@ -54,6 +68,10 @@ const RegisterForm: FC = () => {
     const fileSelected = async (e: any) => {
         const file: Blob | Uint8Array | ArrayBuffer = e.target.files[0];
         setFile(file)
+    }
+
+    if (userValue) {
+        return <Redirect to='/me' />
     }
 
     return (

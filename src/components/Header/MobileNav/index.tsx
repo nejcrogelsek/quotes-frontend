@@ -5,17 +5,19 @@ import { NavLink, useHistory } from 'react-router-dom'
 import profileUrl from '../../../assets/images/profile_picture.png'
 
 interface Props {
-    isAuthenticated: boolean;
+    user: any;
+    setUserValue: any;
     toggleNav: () => void;
     toggle: boolean;
 }
 
-const MobileNav: FC<Props> = ({ isAuthenticated, toggleNav, toggle }: Props) => {
+const MobileNav: FC<Props> = ({ user, setUserValue, toggleNav, toggle }: Props) => {
     const history = useHistory();
 
 
     const signout = () => {
-        console.log('HEADER MOBILE SIGN OUT');
+        localStorage.removeItem('user');
+        setUserValue(null);
         toggleNav();
         history.push('/');
     }
@@ -28,8 +30,8 @@ const MobileNav: FC<Props> = ({ isAuthenticated, toggleNav, toggle }: Props) => 
                         <Close className="orange" />
                     </button>
                 </div>
-                <ul className={isAuthenticated ? 'navbar-nav isAuth' : 'navbar-nav'}>
-                    {isAuthenticated ?
+                <ul className={user ? 'navbar-nav isAuth' : 'navbar-nav'}>
+                    {user ?
                         <>
                             <li className='nav-item user-item'>
                                 <NavLink to='/me' onClick={() => toggleNav()}>

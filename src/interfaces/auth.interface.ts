@@ -10,3 +10,11 @@ export type SignInData = {
     email: string;
     password: string;
 }
+
+export type UserData = {
+    id: number;
+    email: string;
+    first_name: string;
+    last_name: string;
+    profile_image: string;
+}
