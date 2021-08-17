@@ -10,6 +10,7 @@ import MiddleLeftMobile from './assets/images/vector_middle_left_mobile.png'
 import MiddleRightMobile from './assets/images/vector_middle_right_mobile.png'
 import { UserContext } from './stores/user.context'
 import { UserData } from './interfaces/auth.interface'
+import axios from 'axios'
 
 const App: FC = () => {
 
@@ -25,8 +26,15 @@ const App: FC = () => {
   };
 
   const checkIfAccessTokenExists = () => {
-    const token = window.localStorage.getItem('user');
+    const token = localStorage.getItem('user');
     console.log(token);
+    if (token) {
+      axios.get('/users/protected', { headers: { 'Authorization': `Bearer ${token}` } }).then((res) => {
+        console.log('TOKEN DATA: ', res.data);
+      }).catch(err => {
+        console.error('ERROR MESSAGE: ', err);
+      })
+    }
   }
 
 
