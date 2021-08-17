@@ -1,6 +1,5 @@
 import { Avatar } from '@material-ui/core'
 import { FC } from 'react'
-import ProfileUrl from '../../assets/images/profile2.png'
 
 interface Props {
     votes: number;

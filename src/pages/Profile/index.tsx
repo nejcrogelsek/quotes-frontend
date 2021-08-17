@@ -1,8 +1,7 @@
-import { FC, useState } from 'react'
-import { QuoteBlock, ProfileMostLiked, ProfileBanner, ProfileQuoteBlock } from '../../components'
+import { FC } from 'react'
+import { ProfileMostLiked, ProfileBanner, ProfileQuoteBlock } from '../../components'
 
 const Profile: FC = () => {
-    const [isAuthenticated, setIsAuthenticated] = useState(true);
     return (
         <div className='profile-page'>
             <ProfileBanner />

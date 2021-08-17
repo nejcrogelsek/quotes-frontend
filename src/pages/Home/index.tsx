@@ -3,7 +3,7 @@ import { Hero, MostLiked, QuoteBlock, MostRecent } from '../../components'
 import { UserContext } from '../../stores/user.context';
 
 const Home: FC = () => {
-    const { userValue, setUserValue } = useContext(UserContext)
+    const { userValue } = useContext(UserContext)
     return (
         <div className='home-page'>
             <div className='container-lg'>

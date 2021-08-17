@@ -1,4 +1,3 @@
-import { createContext, Dispatch, SetStateAction } from 'react'
-import { UserData } from '../interfaces/auth.interface';
+import { createContext } from 'react'
 
 export const UserContext = createContext<any>(null);

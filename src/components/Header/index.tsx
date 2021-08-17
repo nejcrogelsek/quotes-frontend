@@ -6,7 +6,6 @@ import { AddQuoteModal, SettingsModal } from '..'
 import { UserContext } from '../../stores/user.context'
 
 const Header: FC = () => {
-    const [isAuthenticated, setIsAuthenticated] = useState(false);
     const [isMobile, setIsMobile] = useState(true);
     const [toggle, setToggle] = useState(false);
     const { userValue, setUserValue } = useContext(UserContext)

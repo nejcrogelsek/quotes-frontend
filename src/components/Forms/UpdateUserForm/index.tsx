@@ -1,4 +1,4 @@
-import { FC, useContext, useEffect } from 'react';
+import { FC, useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import axios from '../../../api/axios';
 import { SignUpData } from '../../../interfaces/auth.interface';

@@ -4,7 +4,6 @@ import { FC } from 'react'
 const Banner: FC = () => {
     return (
         <div className='profile-banner'>
-            {/* <img src={BackgroundUrl} alt='' /> */}
             <div className="content">
                 <Avatar />
                 <h2 className='page-title text-center'>John Scott</h2>

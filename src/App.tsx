@@ -29,11 +29,11 @@ const App: FC = () => {
     const token = localStorage.getItem('user');
     console.log(token);
     if (token) {
-      axios.get('/users/protected', { headers: { 'Authorization': `Bearer ${token}` } }).then((res) => {
-        console.log('TOKEN DATA: ', res.data);
-      }).catch(err => {
-        console.error('ERROR MESSAGE: ', err);
-      })
+      // axios.get('/users/protected', { headers: { 'Authorization': `${token}` } }).then((res) => {
+      //   console.log('TOKEN DATA: ', res.data);
+      // }).catch(err => {
+      //   console.error('ERROR MESSAGE: ', err);
+      // })
     }
   }
 

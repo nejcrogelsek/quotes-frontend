@@ -1,4 +1,4 @@
-import { FC, useContext, useState } from 'react'
+import { FC, useContext } from 'react'
 import { Route, Redirect, RouteProps } from "react-router-dom"
 import { UserContext } from '../../stores/user.context'
 
@@ -8,7 +8,7 @@ interface Props extends RouteProps {
 }
 
 const PrivateRoute: FC<Props> = ({ component: Component, ...rest }) => {
-    const { userValue, setUserValue } = useContext(UserContext)
+    const { userValue } = useContext(UserContext)
 
     return (
         <Route {...rest} render={props => userValue ? <Component {...props} /> : <Redirect to='/login' />} />
