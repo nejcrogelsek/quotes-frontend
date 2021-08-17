@@ -8,6 +8,12 @@
   padding: 30px 35px;
   box-shadow: 0 0 8px rgba($color: $dark, $alpha: 0.15);
 }
+.navbar,
+.navbar-collapsible {
+  > .container-fluid {
+    padding: 0;
+  }
+}
 .navbar .container-fluid .header-buttons {
   display: flex;
   flex-wrap: inherit;

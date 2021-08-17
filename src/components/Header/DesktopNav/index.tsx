@@ -5,21 +5,23 @@ import { NavLink, useHistory } from 'react-router-dom'
 import profileUrl from '../../../assets/images/profile_picture.png'
 
 interface Props {
-    isAuthenticated: boolean;
+    user: any;
+    setUserValue: any;
 }
 
-const DesktopNav: FC<Props> = ({ isAuthenticated }: Props) => {
+const DesktopNav: FC<Props> = ({ user, setUserValue }: Props) => {
     const history = useHistory();
 
 
     const signout = () => {
-        console.log('HEADER DESKTOP SIGN OUT');
+        localStorage.removeItem('user');
+        setUserValue(null);
         history.push('/');
     }
 
     return (
-        <ul className={isAuthenticated ? 'navbar-nav isAuth' : 'navbar-nav'}>
-            {isAuthenticated ?
+        <ul className={user ? 'navbar-nav isAuth' : 'navbar-nav'}>
+            {user ?
                 <>
                     <li className='nav-item'>
                         <NavLink className='nav-link' to='/' >
