@@ -1,14 +1,13 @@
 import { Avatar, } from '@material-ui/core';
 import { FC, useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { Link, Redirect, useLocation } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import axios from '../../../api/axios';
 import { SignUpData } from '../../../interfaces/auth.interface';
 import { ToastContainer, toast } from 'react-toastify';
 import { UserContext } from '../../../stores/user.context';
 
 const RegisterForm: FC = () => {
-    const location = useLocation();
     const [file, setFile] = useState<Blob | Uint8Array | ArrayBuffer | undefined>(undefined);
     const { register, handleSubmit, formState: { errors }, reset } = useForm<SignUpData>();
     const { userValue, setUserValue } = useContext(UserContext)
@@ -103,21 +102,13 @@ const RegisterForm: FC = () => {
                     <input {...register('confirm_password', { required: 'Please confirm password', pattern: /((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/ })} type='password' name='confirm_password' className='form-control' />
                     {errors.confirm_password && <span className='form-text required'>{errors.confirm_password.message}</span>}
                 </div>
-                {location.pathname.slice(1, location.pathname.length) === 'signup' ?
-                    <>
-                        <div className='buttons'>
-                            <input className='site-btn btn-orange' type='submit' value='Sign up' />
-                        </div>
-                        <div className="goto-login">
-                            <p>Already have an account?</p>
-                            <Link to="/login" className="orange">Sign in</Link>
-                        </div>
-                    </> :
-                    <div className='buttons'>
-                        <input className='site-btn btn-orange' type='submit' value='Submit' />
-                        <button type="button" className="btn" data-bs-dismiss="modal" aria-label="Close">Close</button>
-                    </div>
-                }
+                <div className='buttons'>
+                    <input className='site-btn btn-orange' type='submit' value='Sign up' />
+                </div>
+                <div className="goto-login">
+                    <p>Already have an account?</p>
+                    <Link to="/login" className="orange">Sign in</Link>
+                </div>
             </form>
         </>
     )

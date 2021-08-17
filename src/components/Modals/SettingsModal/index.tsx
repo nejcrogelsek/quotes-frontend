@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { RegisterForm } from '../..'
+import { UpdateUserForm } from '../..'
 
 const SettingsModal: FC = () => {
     return (
@@ -9,7 +9,7 @@ const SettingsModal: FC = () => {
                     <div className='modal-body'>
                         <h2 className='page-title'>Profile <span>settings</span></h2>
                         <p>Change your profile settings.</p>
-                        <RegisterForm />
+                        <UpdateUserForm />
                     </div>
                 </div>
             </div>

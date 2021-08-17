@@ -3,6 +3,7 @@ import { FC, useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import { SignInData } from '../../../interfaces/auth.interface';
 import { UserContext } from '../../../stores/user.context';
+import { Redirect } from 'react-router-dom';
 
 const LoginForm: FC = () => {
     const { register, handleSubmit, formState: { errors }, reset } = useForm<SignInData>();
@@ -19,13 +20,17 @@ const LoginForm: FC = () => {
                 username: data.email,
                 password: data.password
             };
-            await axios.post('/users/login', repairedData).then((res) => {
-                setUserValue(res.data.user);
+            await axios.post('/users/login', repairedData).then(async (res) => {
+                await setUserValue(res.data.user);
                 localStorage.setItem('user', res.data.access_token);
             })
         } catch (err) {
             console.log('Error message:', err);
         }
+    }
+
+    if (userValue) {
+        return <Redirect to='/me' />
     }
 
 
