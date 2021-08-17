@@ -3,10 +3,8 @@ import { FC, useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import { SignInData } from '../../../interfaces/auth.interface';
 import { UserContext } from '../../../stores/user.context';
-import { useHistory } from 'react-router-dom';
 
 const LoginForm: FC = () => {
-    const history = useHistory();
     const { register, handleSubmit, formState: { errors }, reset } = useForm<SignInData>();
     const { userValue, setUserValue } = useContext(UserContext);
 
@@ -15,16 +13,7 @@ const LoginForm: FC = () => {
         reset();
     })
 
-    const runLogoutTimer = (timer: number) => {
-        setTimeout(() => {
-            localStorage.removeItem('user');
-            setUserValue(null);
-            history.push('/');
-        }, timer);
-    }
-
     const signin = async (data: SignInData) => {
-        console.log(data);
         try {
             const repairedData = {
                 username: data.email,
@@ -33,7 +22,6 @@ const LoginForm: FC = () => {
             await axios.post('/users/login', repairedData).then((res) => {
                 setUserValue(res.data.user);
                 localStorage.setItem('user', res.data.access_token);
-                runLogoutTimer(900000);
             })
         } catch (err) {
             console.log('Error message:', err);

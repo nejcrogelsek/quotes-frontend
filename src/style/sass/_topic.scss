@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 73px 0 156px;
+  padding: 73px 0;
   .content {
     max-width: 480px;
     width: 100%;
@@ -270,7 +270,7 @@
 @media #{$large} {
   .login-page,
   .register-page {
-    padding: 156px 0;
+    padding: 73px 0;
   }
   .home-page {
     .explore-title {

@@ -1,14 +1,13 @@
 import { Avatar, } from '@material-ui/core';
 import { FC, useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { Link, Redirect, useHistory, useLocation } from 'react-router-dom';
+import { Link, Redirect, useLocation } from 'react-router-dom';
 import axios from '../../../api/axios';
 import { SignUpData } from '../../../interfaces/auth.interface';
 import { ToastContainer, toast } from 'react-toastify';
 import { UserContext } from '../../../stores/user.context';
 
 const RegisterForm: FC = () => {
-    const history = useHistory();
     const location = useLocation();
     const [file, setFile] = useState<Blob | Uint8Array | ArrayBuffer | undefined>(undefined);
     const { register, handleSubmit, formState: { errors }, reset } = useForm<SignUpData>();
@@ -17,14 +16,6 @@ const RegisterForm: FC = () => {
         signup(data);
         reset();
     })
-
-    const runLogoutTimer = (timer: number) => {
-        setTimeout(() => {
-            localStorage.removeItem('user');
-            setUserValue(null);
-            history.push('/');
-        }, timer);
-    }
 
     const signup = async (createUserDto: SignUpData): Promise<any> => {
         try {
@@ -51,7 +42,6 @@ const RegisterForm: FC = () => {
                     await axios.post('/users/create', finalData).then((res) => {
                         setUserValue(res.data.user);
                         localStorage.setItem('user', res.data.access_token);
-                        runLogoutTimer(900000);
                     });
                 } else {
                     toast.error('You need to upload a profile image.')
