@@ -1,5 +1,5 @@
 import { FC, useEffect, useMemo, useState } from 'react'
-import { BrowserRouter as Router, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { Footer, Header, PrivateRoute, PublicRoute } from './components'
 import { Home, Login, Profile, Register } from './pages'
 import TopRight from './assets/images/vector_top_right.png'
@@ -56,10 +56,11 @@ const App: FC = () => {
       <Router>
         <Header />
         <Switch>
-          <PublicRoute exact path='/' component={Home} />
-          <PublicRoute exact path='/login' component={Login} />
-          <PublicRoute exact path='/signup' component={Register} />
+          <Route exact path='/' component={Home} />
+          <Route exact path='/login' component={Login} />
+          <Route exact path='/signup' component={Register} />
           <PrivateRoute exact path='/me' component={Profile} />
+          <Route path='*' component={Login} />
         </Switch>
         <Footer />
         <img className='background-image background-image1' src={isMobile ? TopRightMobile : TopRight} alt='' />
