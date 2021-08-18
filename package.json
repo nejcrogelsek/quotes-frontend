@@ -16,7 +16,7 @@
     "axios": "^0.21.1",
     "node-sass": "^6.0.1",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "react-dom": "^18.0.0-alpha-bd255700d-20210816",
     "react-hook-form": "^7.12.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
