@@ -5,12 +5,11 @@ import { UserContext } from '../../stores/user.context'
 
 interface Props {
     votes: number;
-    username: string;
-    image_url: string;
-    quote: string;
+    message: string;
+    user_id: number;
 }
 
-const QuoteBlock: FC<Props> = ({ votes, username, image_url, quote }: Props) => {
+const QuoteBlock: FC<Props> = ({ votes, message, user_id }: Props) => {
     const { userValue } = useContext(UserContext);
     return (
         <div className='quote-block'>
@@ -44,10 +43,10 @@ const QuoteBlock: FC<Props> = ({ votes, username, image_url, quote }: Props) => 
                 }
             </div>
             <div className="quote-part">
-                <p className='quote-text'>{quote}</p>
+                <p className='quote-text'>{message}</p>
                 <div className="quote-user">
-                    <Avatar src={image_url} />
-                    <span className='quote-username'>{username}</span>
+                    <Avatar src='nekaj' />
+                    <span className='quote-username'>USERNAME</span>
                 </div>
             </div>
         </div>

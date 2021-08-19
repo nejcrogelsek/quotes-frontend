@@ -1,9 +1,10 @@
 import { FC, useEffect, useState } from 'react'
 import { QuoteBlock } from '../../'
-import quotes from '../../../assets/db/quotes.json'
+import { QuoteData } from '../../../interfaces/quote.interface';
 
 const ProfileMostLiked: FC = () => {
     const [isMobile, setIsMobile] = useState(true);
+    const [stateQuotes, setStateQuotes] = useState<QuoteData[]>([]);
 
     const checkIfMobile = () => {
         if (window.innerWidth < 992) {
@@ -27,12 +28,12 @@ const ProfileMostLiked: FC = () => {
         <div className='profile-most-liked'>
             <h3 className='page-title-h3 orange'>Likes</h3>
             <div className='quotes-wrap'>
-                {quotes.map(quote => {
+                {stateQuotes.map(quote => {
                     loop++;
                     if (isMobile === true && loop < 5) {
-                        return <QuoteBlock key={quote.id} votes={quote.votes} username={quote.username} image_url={quote.image_url} quote={quote.quote} />
+                        return <QuoteBlock key={quote.id} votes={quote.votes} message={quote.message} user_id={quote.user_id} />
                     } else if (isMobile === false && loop < 7) {
-                        return <QuoteBlock key={quote.id} votes={quote.votes} username={quote.username} image_url={quote.image_url} quote={quote.quote} />
+                        return <QuoteBlock key={quote.id} votes={quote.votes} message={quote.message} user_id={quote.user_id} />
                     } else {
                         return null
                     }

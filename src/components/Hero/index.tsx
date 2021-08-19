@@ -15,21 +15,18 @@ const Hero: FC = () => {
                     <div className="hero-quotes-wrap">
                         <QuoteBlock
                             votes={52}
-                            username='John Scott'
-                            image_url='../../assets/images/profile5.png'
-                            quote='All our dreams can come true, if we have the courage to pursue them.'
+                            message='All our dreams can come true, if we have the courage to pursue them.'
+                            user_id={1}
                         />
                         <QuoteBlock
                             votes={154}
-                            username='Marvin McKinney'
-                            image_url='../../assets/images/profile5.png'
-                            quote="Twenty years from now you will be more disappointed by the things that you didn't do than by the ones you did do. So throw off the bowlines. Sail away from the safe harbor. Catch the trade winds in your sails. Explore. Dream. Discover."
+                            message="Twenty years from now you will be more disappointed by the things that you didn't do than by the ones you did do. So throw off the bowlines. Sail away from the safe harbor. Catch the trade winds in your sails. Explore. Dream. Discover."
+                            user_id={2}
                         />
                         <QuoteBlock
                             votes={52}
-                            username='John Scott'
-                            image_url='../../assets/images/profile5.png'
-                            quote='All our dreams can come true, if we have the courage to pursue them.'
+                            message='All our dreams can come true, if we have the courage to pursue them.'
+                            user_id={1}
                         />
                     </div>
                 </div>

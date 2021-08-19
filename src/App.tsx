@@ -45,15 +45,8 @@ const App: FC = () => {
     }
   }
 
-  const getQuotes = async () => {
-    await axios.get('/quotes').then((res) => {
-      setUsersQuotes(res.data);
-    })
-  }
-
 
   useEffect(() => {
-    getQuotes();
     checkIfAccessTokenExists();
     checkIfMobile();
     window.addEventListener('resize', checkIfMobile);

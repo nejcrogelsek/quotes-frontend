@@ -1,9 +1,10 @@
 import { FC, useEffect, useState } from 'react'
 import { QuoteBlock } from '../..'
-import quotes from '../../../assets/db/quotes.json'
+import { QuoteData } from '../../../interfaces/quote.interface';
 
 const MostRecent: FC = () => {
     const [isMobile, setIsMobile] = useState(true);
+    const [stateQuotes, setStateQuotes] = useState<QuoteData[]>([]);
 
     const checkIfMobile = () => {
         if (window.innerWidth < 992) {
@@ -28,12 +29,12 @@ const MostRecent: FC = () => {
             <h2 className='page-title secondary'>Most recent quotes</h2>
             <p>Recent quotes updates as soon user adds new quote. Go ahead show them that you seen the new quote and like the ones you like.</p>
             <div className='quotes-wrap'>
-                {quotes.map(quote => {
+                {stateQuotes.map(quote => {
                     loop++;
                     if (isMobile === true && loop < 5) {
-                        return <QuoteBlock key={quote.id} votes={quote.votes} username={quote.username} image_url={quote.image_url} quote={quote.quote} />
+                        return <QuoteBlock key={quote.id} votes={quote.votes} message={quote.message} user_id={quote.user_id} />
                     } else if (isMobile === false && loop < 10) {
-                        return <QuoteBlock key={quote.id} votes={quote.votes} username={quote.username} image_url={quote.image_url} quote={quote.quote} />
+                        return <QuoteBlock key={quote.id} votes={quote.votes} message={quote.message} user_id={quote.user_id} />
                     } else {
                         return null
                     }

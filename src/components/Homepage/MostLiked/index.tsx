@@ -1,7 +1,8 @@
 import { FC, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { QuoteBlock } from '../..'
-import quotes from '../../../assets/db/quotes.json'
+import axios from '../../../api/axios'
+import { QuoteData } from '../../../interfaces/quote.interface'
 
 interface Props {
     text: string;
@@ -9,6 +10,7 @@ interface Props {
 
 const MostLiked: FC<Props> = ({ text }: Props) => {
     const [isMobile, setIsMobile] = useState(true);
+    const [stateQuotes, setStateQuotes] = useState<QuoteData[]>([]);
 
     const checkIfMobile = () => {
         if (window.innerWidth < 992) {
@@ -18,7 +20,14 @@ const MostLiked: FC<Props> = ({ text }: Props) => {
         }
     };
 
+    const setMostLikedQuotes = async () => {
+        await axios.get('/quotes').then((res) => {
+            setStateQuotes(res.data);
+        })
+    }
+
     useEffect(() => {
+        setMostLikedQuotes();
         checkIfMobile();
         window.addEventListener('resize', checkIfMobile);
         return () => {
@@ -33,12 +42,12 @@ const MostLiked: FC<Props> = ({ text }: Props) => {
             <h2 className='page-title secondary'>Most liked quotes</h2>
             <p>Most liked quotes on the platform.  Sign up or login to like the quotes  and keep them saved in your profile.</p>
             <div className='quotes-wrap'>
-                {quotes.map(quote => {
+                {stateQuotes.map(quote => {
                     loop++;
                     if (isMobile === true && loop < 5) {
-                        return <QuoteBlock key={quote.id} votes={quote.votes} username={quote.username} image_url={quote.image_url} quote={quote.quote} />
+                        return <QuoteBlock key={quote.id} votes={quote.votes} message={quote.message} user_id={quote.user_id} />
                     } else if (isMobile === false && loop < 10) {
-                        return <QuoteBlock key={quote.id} votes={quote.votes} username={quote.username} image_url={quote.image_url} quote={quote.quote} />
+                        return <QuoteBlock key={quote.id} votes={quote.votes} message={quote.message} user_id={quote.user_id} />
                     } else {
                         return null
                     }
