@@ -2,7 +2,6 @@ import { Avatar } from '@material-ui/core'
 import { Close } from '@material-ui/icons'
 import { FC } from 'react'
 import { NavLink, useHistory } from 'react-router-dom'
-import profileUrl from '../../../assets/images/profile_picture.png'
 
 interface Props {
     user: any;
@@ -35,7 +34,7 @@ const MobileNav: FC<Props> = ({ user, setUserValue, toggleNav, toggle }: Props) 
                         <>
                             <li className='nav-item user-item'>
                                 <NavLink to='/me' onClick={() => toggleNav()}>
-                                    <Avatar src={profileUrl} />
+                                    <Avatar src={user.profile_image} />
                                     <span className='auth-user'>John Scott</span>
                                 </NavLink>
                             </li>

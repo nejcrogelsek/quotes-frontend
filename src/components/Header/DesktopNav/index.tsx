@@ -2,7 +2,6 @@ import { Avatar } from '@material-ui/core'
 import { Add } from '@material-ui/icons'
 import { FC } from 'react'
 import { NavLink, useHistory } from 'react-router-dom'
-import profileUrl from '../../../assets/images/profile_picture.png'
 
 interface Props {
     user: any;
@@ -11,7 +10,6 @@ interface Props {
 
 const DesktopNav: FC<Props> = ({ user, setUserValue }: Props) => {
     const history = useHistory();
-
 
     const signout = () => {
         localStorage.removeItem('user');
@@ -40,7 +38,7 @@ const DesktopNav: FC<Props> = ({ user, setUserValue }: Props) => {
                     </li>
                     <li className='nav-item user-item'>
                         <NavLink to='/me'>
-                            <Avatar src={profileUrl} />
+                            <Avatar src={user.profile_image} />
                         </NavLink>
                     </li>
                     <li className='nav-item'>

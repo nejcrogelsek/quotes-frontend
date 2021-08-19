@@ -1,6 +1,6 @@
 import { FC, useEffect, useMemo, useState } from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import { Footer, Header, PrivateRoute, PublicRoute } from './components'
+import { Footer, Header, PrivateRoute } from './components'
 import { Home, Login, Profile, Register } from './pages'
 import TopRight from './assets/images/vector_top_right.png'
 import MiddleLeft from './assets/images/vector_middle_left.png'
@@ -10,7 +10,7 @@ import MiddleLeftMobile from './assets/images/vector_middle_left_mobile.png'
 import MiddleRightMobile from './assets/images/vector_middle_right_mobile.png'
 import { UserContext } from './stores/user.context'
 import { UserData } from './interfaces/auth.interface'
-import axios from 'axios'
+import axios from './api/axios'
 
 const App: FC = () => {
 
@@ -25,15 +25,14 @@ const App: FC = () => {
     }
   };
 
-  const checkIfAccessTokenExists = () => {
-    const token = localStorage.getItem('user');
-    console.log(token);
+  const checkIfAccessTokenExists = async () => {
+    const token: string | null = localStorage.getItem('user');
     if (token) {
-      // axios.get('/users/protected', { headers: { 'Authorization': `${token}` } }).then((res) => {
-      //   console.log('TOKEN DATA: ', res.data);
-      // }).catch(err => {
-      //   console.error('ERROR MESSAGE: ', err);
-      // })
+      await axios.get('/users/protected', { headers: { 'Authorization': `Bearer ${token}` } }).then((res) => {
+        setUserValue(res.data);
+      }).catch(err => {
+        console.error('ERROR MESSAGE: ', err);
+      })
     }
   }
 

@@ -18,3 +18,7 @@ export type UserData = {
     last_name: string;
     profile_image: string;
 }
+
+export interface UserProps {
+    user: UserData
+}
