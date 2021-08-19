@@ -25,7 +25,7 @@ const LoginForm: FC = () => {
             await axios.post('/users/login', repairedData).then(async (res) => {
                 await setUserValue(res.data.user);
                 localStorage.setItem('user', res.data.access_token);
-                axios.get(`/quotes/${res.data.user.id}`).then(res => {
+                await axios.get(`/quotes/${res.data.user.id}`).then(res => {
                     setQuoteValue(res.data);
                 })
             })

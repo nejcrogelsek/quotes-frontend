@@ -13,11 +13,14 @@ import { UserData } from './interfaces/auth.interface'
 import axios from './api/axios'
 import { QuoteData } from './interfaces/quote.interface'
 import { QuoteContext } from './stores/quote.context'
+import { IQuotes } from './interfaces/app.interface'
+import { AppContext } from './stores/app.context'
 
 const App: FC = () => {
 
   const [userValue, setUserValue] = useState<UserData | null>(null);
   const [quoteValue, setQuoteValue] = useState<QuoteData | null>(null);
+  const [usersQuotes, setUsersQuotes] = useState<IQuotes | null>(null);
   const [isMobile, setIsMobile] = useState(true);
 
   const checkIfMobile = () => {
@@ -42,8 +45,15 @@ const App: FC = () => {
     }
   }
 
+  const getQuotes = async () => {
+    await axios.get('/quotes').then((res) => {
+      setUsersQuotes(res.data);
+    })
+  }
+
 
   useEffect(() => {
+    getQuotes();
     checkIfAccessTokenExists();
     checkIfMobile();
     window.addEventListener('resize', checkIfMobile);
@@ -60,25 +70,31 @@ const App: FC = () => {
     quoteValue, setQuoteValue
   }), [quoteValue, setQuoteValue]);
 
+  const usersQuotesProvider = useMemo(() => ({
+    usersQuotes, setUsersQuotes
+  }), [usersQuotes, setUsersQuotes]);
+
   return (
-    <UserContext.Provider value={userProvider}>
-      <QuoteContext.Provider value={quoteProvider}>
-        <Router>
-          <Header />
-          <Switch>
-            <Route exact path='/' component={Home} />
-            <Route exact path='/login' component={Login} />
-            <Route exact path='/signup' component={Register} />
-            <PrivateRoute exact path='/me' component={Profile} />
-            <Route path='*' component={Login} />
-          </Switch>
-          <Footer />
-          <img className='background-image background-image1' src={isMobile ? TopRightMobile : TopRight} alt='' />
-          <img className='background-image background-image2' src={isMobile ? MiddleLeftMobile : MiddleLeft} alt='' />
-          <img className='background-image background-image3' src={isMobile ? MiddleRightMobile : MiddleRight} alt='' />
-        </Router>
-      </QuoteContext.Provider>
-    </UserContext.Provider>
+    <AppContext.Provider value={usersQuotesProvider}>
+      <UserContext.Provider value={userProvider}>
+        <QuoteContext.Provider value={quoteProvider}>
+          <Router>
+            <Header />
+            <Switch>
+              <Route exact path='/' component={Home} />
+              <Route exact path='/login' component={Login} />
+              <Route exact path='/signup' component={Register} />
+              <PrivateRoute exact path='/me' component={Profile} />
+              <Route path='*' component={Login} />
+            </Switch>
+            <Footer />
+            <img className='background-image background-image1' src={isMobile ? TopRightMobile : TopRight} alt='' />
+            <img className='background-image background-image2' src={isMobile ? MiddleLeftMobile : MiddleLeft} alt='' />
+            <img className='background-image background-image3' src={isMobile ? MiddleRightMobile : MiddleRight} alt='' />
+          </Router>
+        </QuoteContext.Provider>
+      </UserContext.Provider>
+    </AppContext.Provider>
   )
 }
 
