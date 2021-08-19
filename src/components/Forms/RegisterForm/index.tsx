@@ -6,11 +6,13 @@ import axios from '../../../api/axios';
 import { SignUpData } from '../../../interfaces/auth.interface';
 import { ToastContainer, toast } from 'react-toastify';
 import { UserContext } from '../../../stores/user.context';
+import { QuoteContext } from '../../../stores/quote.context';
 
 const RegisterForm: FC = () => {
     const [file, setFile] = useState<Blob | Uint8Array | ArrayBuffer | undefined>(undefined);
     const { register, handleSubmit, formState: { errors }, reset } = useForm<SignUpData>();
-    const { userValue, setUserValue } = useContext(UserContext)
+    const { userValue, setUserValue } = useContext(UserContext);
+    const { setQuoteValue } = useContext(QuoteContext);
     const onSubmit = handleSubmit((data) => {
         signup(data);
         reset();
@@ -41,6 +43,9 @@ const RegisterForm: FC = () => {
                     await axios.post('/users/create', finalData).then((res) => {
                         setUserValue(res.data.user);
                         localStorage.setItem('user', res.data.access_token);
+                        axios.get(`/quotes/${res.data.user.id}`).then(res => {
+                            setQuoteValue(res.data);
+                        })
                     });
                 } else {
                     toast.error('You need to upload a profile image.')

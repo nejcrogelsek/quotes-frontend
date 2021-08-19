@@ -4,10 +4,12 @@ import { useForm } from 'react-hook-form';
 import { SignInData } from '../../../interfaces/auth.interface';
 import { UserContext } from '../../../stores/user.context';
 import { Redirect } from 'react-router-dom';
+import { QuoteContext } from '../../../stores/quote.context';
 
 const LoginForm: FC = () => {
     const { register, handleSubmit, formState: { errors }, reset } = useForm<SignInData>();
     const { userValue, setUserValue } = useContext(UserContext);
+    const { setQuoteValue } = useContext(QuoteContext);
 
     const onSubmit = handleSubmit((data) => {
         signin(data);
@@ -23,6 +25,9 @@ const LoginForm: FC = () => {
             await axios.post('/users/login', repairedData).then(async (res) => {
                 await setUserValue(res.data.user);
                 localStorage.setItem('user', res.data.access_token);
+                axios.get(`/quotes/${res.data.user.id}`).then(res => {
+                    setQuoteValue(res.data);
+                })
             })
         } catch (err) {
             console.log('Error message:', err);
