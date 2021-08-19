@@ -6,14 +6,16 @@ import { NavLink, useHistory } from 'react-router-dom'
 interface Props {
     user: any;
     setUserValue: any;
+    setQuoteValue: any;
 }
 
-const DesktopNav: FC<Props> = ({ user, setUserValue }: Props) => {
+const DesktopNav: FC<Props> = ({ user, setUserValue, setQuoteValue }: Props) => {
     const history = useHistory();
 
     const signout = () => {
         localStorage.removeItem('user');
         setUserValue(null);
+        setQuoteValue(null);
         history.push('/');
     }
 

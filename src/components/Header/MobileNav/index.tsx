@@ -8,15 +8,17 @@ interface Props {
     setUserValue: any;
     toggleNav: () => void;
     toggle: boolean;
+    setQuoteValue: any;
 }
 
-const MobileNav: FC<Props> = ({ user, setUserValue, toggleNav, toggle }: Props) => {
+const MobileNav: FC<Props> = ({ user, setUserValue, toggleNav, toggle, setQuoteValue }: Props) => {
     const history = useHistory();
 
 
     const signout = () => {
         localStorage.removeItem('user');
         setUserValue(null);
+        setQuoteValue(null);
         toggleNav();
         history.push('/');
     }

@@ -4,11 +4,13 @@ import { Menu, Add } from '@material-ui/icons'
 import { DesktopNav, MobileNav } from '..'
 import { AddQuoteModal, SettingsModal } from '..'
 import { UserContext } from '../../stores/user.context'
+import { QuoteContext } from '../../stores/quote.context'
 
 const Header: FC = () => {
     const [isMobile, setIsMobile] = useState(true);
     const [toggle, setToggle] = useState(false);
-    const { userValue, setUserValue } = useContext(UserContext)
+    const { userValue, setUserValue } = useContext(UserContext);
+    const { setQuoteValue } = useContext(QuoteContext);
 
     const checkIfMobile = () => {
         if (window.innerWidth < 992) {
@@ -45,8 +47,8 @@ const Header: FC = () => {
                             </button> : null}
                     </div>
                     {isMobile ?
-                        <MobileNav user={userValue} setUserValue={setUserValue} toggleNav={toggleNav} toggle={toggle} />
-                        : <DesktopNav user={userValue} setUserValue={setUserValue} />
+                        <MobileNav user={userValue} setUserValue={setUserValue} setQuoteValue={setQuoteValue} toggleNav={toggleNav} toggle={toggle} />
+                        : <DesktopNav user={userValue} setUserValue={setUserValue} setQuoteValue={setQuoteValue} />
                     }
                 </div>
             </nav>
