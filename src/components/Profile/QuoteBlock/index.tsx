@@ -1,21 +1,53 @@
 import { Avatar } from '@material-ui/core'
-import { FC, useContext } from 'react'
+import { FC, useContext, useEffect, useState } from 'react'
 import { Add } from '@material-ui/icons'
 import { QuoteContext } from '../../../stores/quote.context'
 import axios from '../../../api/axios'
 import { VoteContext } from '../../../stores/vote.context'
 import { UserContext } from '../../../stores/user.context'
+import { toast } from 'react-toastify'
 
 const ProfileQuoteBlock: FC = () => {
     const { userValue } = useContext(UserContext);
     const { quoteValue, setQuoteValue } = useContext(QuoteContext);
-    const { setVotesValue } = useContext(VoteContext);
+    const { votesValue, setVotesValue } = useContext(VoteContext);
+    const [allow, setAllow] = useState<boolean>(true);
+
     const getVotes = async () => {
         await axios.get('votes').then((res) => {
             setVotesValue(res.data);
         });
     }
 
+    const upvote = () => {
+        if (allow) {
+            axios.post(`/votes/user/${userValue.id}/upvote`, { quote_id: quoteValue.id, user_id: userValue.id }).then((res) => {
+                getVotes();
+            });
+        } else {
+            toast.error('You already liked this quote.');
+        }
+    }
+
+    const downvote = () => {
+        if (!allow) {
+            axios.delete(`/votes/user/${userValue.id}/downvote`, { data: { quote_id: quoteValue.id, user_id: userValue.id } }).then((res) => {
+                getVotes();
+                setAllow(true);
+            });
+        }
+    }
+
+    useEffect(() => {
+        if (quoteValue && userValue && votesValue) {
+            for (let i: number = 0; i < votesValue.length; i++) {
+                if (userValue.id === votesValue[i].user_id && quoteValue.id === votesValue[i].quote_id) {
+                    setAllow(false);
+                    console.log('allow false');
+                }
+            }
+        }
+    }, [quoteValue, userValue, votesValue])
 
     const removeQuote = async () => {
         console.log(userValue);
@@ -36,13 +68,13 @@ const ProfileQuoteBlock: FC = () => {
                 :
                 <>
                     <div className="voting">
-                        <button className='quote-upvote'>
+                        <button className={allow ? 'quote-upvote' : 'quote-upvote not-allowed'} onClick={upvote}>
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-chevron-up" viewBox="0 0 16 16">
                                 <path fillRule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z" />
                             </svg>
                         </button>
                         <span className='quote-votes'>{quoteValue && quoteValue.votes}</span>
-                        <button className='quote-downvote'>
+                        <button className='quote-downvote' onClick={downvote}>
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-chevron-down" viewBox="0 0 16 16">
                                 <path fillRule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
                             </svg>

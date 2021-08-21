@@ -13,9 +13,9 @@ import { UserData } from './interfaces/auth.interface'
 import axios from './api/axios'
 import { QuoteData } from './interfaces/quote.interface'
 import { QuoteContext } from './stores/quote.context'
-import { IQuotes } from './interfaces/app.interface'
 import { IVotes } from './interfaces/vote.interface'
 import { VoteContext } from './stores/vote.context'
+import { ToastContainer } from 'react-toastify'
 
 const App: FC = () => {
 
@@ -79,6 +79,7 @@ const App: FC = () => {
       <QuoteContext.Provider value={quoteProvider}>
         <VoteContext.Provider value={votesProvider}>
           <Router>
+            <ToastContainer />
             <Header />
             <Switch>
               <Route exact path='/' component={Home} />

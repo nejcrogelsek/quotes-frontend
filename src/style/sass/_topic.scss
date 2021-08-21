@@ -126,6 +126,9 @@
       color: $black;
       background: transparent;
       border: none;
+      &.quote-upvote.not-allowed {
+        color: $orange;
+      }
     }
   }
   .quote-part {
