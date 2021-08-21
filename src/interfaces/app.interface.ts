@@ -9,3 +9,7 @@ export interface AppProps {
 export type IQuotes = {
     quotes: QuoteData[]
 }
+
+export type IAllow = {
+    allow: boolean;
+}

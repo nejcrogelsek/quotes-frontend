@@ -62,16 +62,18 @@ const QuoteBlock: FC<Props> = ({ id, votes, message, user }: Props) => {
     }
 
     useEffect(() => {
-        if (user) {
-            for (let i: number = 0; i < votesValue.length; i++) {
-                if (user && user.id === votesValue[i].user_id && id === votesValue[i].quote_id) {
-                    setAllow(false);
+        if (votesValue) {
+            if (user) {
+                for (let i: number = 0; i < votesValue.length; i++) {
+                    if (user && user.id === votesValue[i].user_id && id === votesValue[i].quote_id) {
+                        setAllow(false);
+                    }
                 }
-            }
-        } else {
-            for (let i: number = 0; i < votesValue.length; i++) {
-                if (userValue.id === votesValue[i].user_id && id === votesValue[i].quote_id) {
-                    setAllow(false);
+            } else {
+                for (let i: number = 0; i < votesValue.length; i++) {
+                    if (userValue.id === votesValue[i].user_id && id === votesValue[i].quote_id) {
+                        setAllow(false);
+                    }
                 }
             }
         }
