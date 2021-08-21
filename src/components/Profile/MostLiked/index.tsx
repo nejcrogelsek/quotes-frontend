@@ -31,9 +31,9 @@ const ProfileMostLiked: FC = () => {
                 {stateQuotes.map(quote => {
                     loop++;
                     if (isMobile === true && loop < 5) {
-                        return <QuoteBlock key={quote.id} votes={quote.votes} message={quote.message} user_id={quote.user_id} />
+                        return null
                     } else if (isMobile === false && loop < 7) {
-                        return <QuoteBlock key={quote.id} votes={quote.votes} message={quote.message} user_id={quote.user_id} />
+                        return null
                     } else {
                         return null
                     }

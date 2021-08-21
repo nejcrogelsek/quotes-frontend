@@ -1,8 +1,9 @@
-import { FC, useEffect, useState } from 'react'
+import { FC, useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { QuoteBlock } from '../..'
 import axios from '../../../api/axios'
 import { QuoteData } from '../../../interfaces/quote.interface'
+import { QuoteContext } from '../../../stores/quote.context'
 
 interface Props {
     text: string;
@@ -10,6 +11,7 @@ interface Props {
 
 const MostLiked: FC<Props> = ({ text }: Props) => {
     const [isMobile, setIsMobile] = useState(true);
+    const { quoteValue } = useContext(QuoteContext)
     const [stateQuotes, setStateQuotes] = useState<QuoteData[]>([]);
 
     const checkIfMobile = () => {
@@ -35,7 +37,13 @@ const MostLiked: FC<Props> = ({ text }: Props) => {
         };
     }, []);
 
+    useEffect(() => {
+        setMostLikedQuotes();
+    }, [quoteValue])
+
     let loop: number = 0;
+
+    console.log(stateQuotes);
 
     return (
         <div className={text === 'signup' ? 'homepage-most-liked signup' : 'homepage-most-liked'}>
@@ -45,9 +53,9 @@ const MostLiked: FC<Props> = ({ text }: Props) => {
                 {stateQuotes.map(quote => {
                     loop++;
                     if (isMobile === true && loop < 5) {
-                        return <QuoteBlock key={quote.id} votes={quote.votes} message={quote.message} user_id={quote.user_id} />
+                        return null
                     } else if (isMobile === false && loop < 10) {
-                        return <QuoteBlock key={quote.id} votes={quote.votes} message={quote.message} user_id={quote.user_id} />
+                        return <QuoteBlock key={quote.id} id={quote.id} votes={quote.votes} message={quote.message} user={quote.user} />
                     } else {
                         return null
                     }

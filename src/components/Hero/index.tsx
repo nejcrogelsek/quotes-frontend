@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { QuoteBlock } from '..'
 
 const Hero: FC = () => {
+    const user = { id: 1, first_name: 'nejc', last_name: 'rogla', profile_image: 'undefined', email: 'nejc@gmail.com' }
     return (
         <div className='hero-section'>
             <div className='row'>
@@ -14,19 +15,22 @@ const Hero: FC = () => {
                 <div className='col-lg-6'>
                     <div className="hero-quotes-wrap">
                         <QuoteBlock
+                            id={1}
                             votes={52}
                             message='All our dreams can come true, if we have the courage to pursue them.'
-                            user_id={1}
+                            user={user}
                         />
                         <QuoteBlock
+                            id={1}
                             votes={154}
                             message="Twenty years from now you will be more disappointed by the things that you didn't do than by the ones you did do. So throw off the bowlines. Sail away from the safe harbor. Catch the trade winds in your sails. Explore. Dream. Discover."
-                            user_id={2}
+                            user={user}
                         />
                         <QuoteBlock
+                            id={1}
                             votes={52}
                             message='All our dreams can come true, if we have the courage to pursue them.'
-                            user_id={1}
+                            user={user}
                         />
                     </div>
                 </div>

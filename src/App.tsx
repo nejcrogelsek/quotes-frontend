@@ -14,13 +14,14 @@ import axios from './api/axios'
 import { QuoteData } from './interfaces/quote.interface'
 import { QuoteContext } from './stores/quote.context'
 import { IQuotes } from './interfaces/app.interface'
-import { AppContext } from './stores/app.context'
+import { IVotes } from './interfaces/vote.interface'
+import { VoteContext } from './stores/vote.context'
 
 const App: FC = () => {
 
   const [userValue, setUserValue] = useState<UserData | null>(null);
   const [quoteValue, setQuoteValue] = useState<QuoteData | null>(null);
-  const [usersQuotes, setUsersQuotes] = useState<IQuotes | null>(null);
+  const [votesValue, setVotesValue] = useState<IVotes | null>(null);
   const [isMobile, setIsMobile] = useState(true);
 
   const checkIfMobile = () => {
@@ -45,9 +46,15 @@ const App: FC = () => {
     }
   }
 
+  const getVotes = async () => {
+    await axios.get('votes').then((res) => {
+      setVotesValue(res.data);
+    });
+  }
 
   useEffect(() => {
     checkIfAccessTokenExists();
+    getVotes();
     checkIfMobile();
     window.addEventListener('resize', checkIfMobile);
     return () => {
@@ -63,14 +70,14 @@ const App: FC = () => {
     quoteValue, setQuoteValue
   }), [quoteValue, setQuoteValue]);
 
-  const usersQuotesProvider = useMemo(() => ({
-    usersQuotes, setUsersQuotes
-  }), [usersQuotes, setUsersQuotes]);
+  const votesProvider = useMemo(() => ({
+    votesValue, setVotesValue
+  }), [votesValue, setVotesValue]);
 
   return (
-    <AppContext.Provider value={usersQuotesProvider}>
-      <UserContext.Provider value={userProvider}>
-        <QuoteContext.Provider value={quoteProvider}>
+    <UserContext.Provider value={userProvider}>
+      <QuoteContext.Provider value={quoteProvider}>
+        <VoteContext.Provider value={votesProvider}>
           <Router>
             <Header />
             <Switch>
@@ -85,9 +92,9 @@ const App: FC = () => {
             <img className='background-image background-image2' src={isMobile ? MiddleLeftMobile : MiddleLeft} alt='' />
             <img className='background-image background-image3' src={isMobile ? MiddleRightMobile : MiddleRight} alt='' />
           </Router>
-        </QuoteContext.Provider>
-      </UserContext.Provider>
-    </AppContext.Provider>
+        </VoteContext.Provider>
+      </QuoteContext.Provider>
+    </UserContext.Provider>
   )
 }
 

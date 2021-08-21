@@ -19,11 +19,11 @@ const AddQuoteForm: FC = () => {
     const signin = async (data: AddQuoteData) => {
         const finalData = {
             message: data.message,
-            user_id: userValue.id
+            user: userValue
         }
         try {
             await axios.patch(`/quotes/myquote`, finalData).then(async (res) => {
-                setQuoteValue(res.data);
+                await setQuoteValue(res.data);
             });
         } catch (err) {
             console.log('Error message:', err);
