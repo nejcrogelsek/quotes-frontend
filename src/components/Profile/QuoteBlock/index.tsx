@@ -6,6 +6,7 @@ import axios from '../../../api/axios'
 import { VoteContext } from '../../../stores/vote.context'
 import { UserContext } from '../../../stores/user.context'
 import { toast } from 'react-toastify'
+import { useLocation } from 'react-router-dom'
 
 const ProfileQuoteBlock: FC = () => {
     const { userValue } = useContext(UserContext);

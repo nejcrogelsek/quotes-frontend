@@ -12,11 +12,11 @@ const AddQuoteForm: FC = () => {
 
     const onSubmit = handleSubmit((data) => {
         console.log(data);
-        signin(data);
+        updateQuote(data);
         reset();
     })
 
-    const signin = async (data: AddQuoteData) => {
+    const updateQuote = async (data: AddQuoteData) => {
         const finalData = {
             message: data.message,
             user: userValue
