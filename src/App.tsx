@@ -46,15 +46,8 @@ const App: FC = () => {
     }
   }
 
-  const getVotes = async () => {
-    await axios.get('votes').then((res) => {
-      setVotesValue(res.data);
-    });
-  }
-
   useEffect(() => {
     checkIfAccessTokenExists();
-    getVotes();
     checkIfMobile();
     window.addEventListener('resize', checkIfMobile);
     return () => {

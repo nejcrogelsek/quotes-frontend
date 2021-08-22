@@ -31,13 +31,10 @@ const QuoteBlock: FC<Props> = ({ id, votes, message, user }: Props) => {
 
     const upvote = () => {
         if (allow) {
-            if (user) {
-                axios.post(`/votes/user/${user.id}/upvote`, { quote_id: id, user_id: user.id }).then((res) => {
+            if (userValue) {
+                axios.post(`/votes/user/${user.id}/upvote`, { quote_id: id, user_id: userValue.id }).then((res) => {
                     getVotes();
-                });
-            } else {
-                axios.post(`/votes/user/${userValue.id}/upvote`, { quote_id: id, user_id: userValue.id }).then((res) => {
-                    getVotes();
+                    setAllow(false);
                 });
             }
         } else {
@@ -47,13 +44,8 @@ const QuoteBlock: FC<Props> = ({ id, votes, message, user }: Props) => {
 
     const downvote = () => {
         if (!allow) {
-            if (user) {
-                axios.delete(`/votes/user/${user.id}/downvote`, { data: { quote_id: id, user_id: user.id } }).then((res) => {
-                    getVotes();
-                    setAllow(true);
-                });
-            } else {
-                axios.delete(`/votes/user/${userValue.id}/downvote`, { data: { quote_id: id, user_id: userValue.id } }).then((res) => {
+            if (userValue) {
+                axios.delete(`/votes/user/${user.id}/downvote`, { data: { quote_id: id, user_id: userValue.id } }).then((res) => {
                     getVotes();
                     setAllow(true);
                 });
@@ -62,23 +54,19 @@ const QuoteBlock: FC<Props> = ({ id, votes, message, user }: Props) => {
     }
 
     useEffect(() => {
-        if (votesValue) {
-            if (user) {
-                for (let i: number = 0; i < votesValue.length; i++) {
-                    if (user && user.id === votesValue[i].user_id && id === votesValue[i].quote_id) {
-                        setAllow(false);
-                    }
-                }
-            } else {
-                for (let i: number = 0; i < votesValue.length; i++) {
-                    if (userValue.id === votesValue[i].user_id && id === votesValue[i].quote_id) {
-                        setAllow(false);
-                    }
+        getVotes();
+    }, [])
+
+    useEffect(() => {
+        if (votesValue && userValue) {
+            for (let i: number = 0; i < votesValue.length; i++) {
+                if (userValue.id === votesValue[i].user_id && id === votesValue[i].quote_id) {
+                    setAllow(false);
+                    console.log('false allow');
                 }
             }
         }
-
-    }, [quoteValue, userValue, votesValue, id, user])
+    }, [quoteValue, userValue, votesValue, id, user, setVotesValue])
 
     const removeQuote = async () => {
         try {
