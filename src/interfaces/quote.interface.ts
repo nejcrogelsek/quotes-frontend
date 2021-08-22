@@ -16,3 +16,7 @@ export type QuoteData = {
 export type QuoteProps = {
     quote: QuoteData;
 }
+
+export type RandomQuote = {
+    quote: number;
+}

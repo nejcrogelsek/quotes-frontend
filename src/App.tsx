@@ -11,18 +11,21 @@ import MiddleRightMobile from './assets/images/vector_middle_right_mobile.png'
 import { UserContext } from './stores/user.context'
 import { UserData } from './interfaces/auth.interface'
 import axios from './api/axios'
-import { QuoteData } from './interfaces/quote.interface'
+import { QuoteData, RandomQuote } from './interfaces/quote.interface'
 import { QuoteContext } from './stores/quote.context'
 import { IVotes } from './interfaces/vote.interface'
 import { VoteContext } from './stores/vote.context'
 import { ToastContainer } from 'react-toastify'
+import { RandomQuoteContext } from './stores/random-quote.context'
 
 const App: FC = () => {
 
   const [userValue, setUserValue] = useState<UserData | null>(null);
   const [quoteValue, setQuoteValue] = useState<QuoteData | null>(null);
   const [votesValue, setVotesValue] = useState<IVotes | null>(null);
+  const [randomQuote, setRandomQuote] = useState<RandomQuote | null>(null);
   const [isMobile, setIsMobile] = useState(true);
+  const [quotes, setQuotes] = useState([]);
 
   const checkIfMobile = () => {
     if (window.innerWidth < 992) {
@@ -84,6 +87,22 @@ const App: FC = () => {
     return () => clearInterval(interval);
   }, [])
 
+  const getQuotes = async () => {
+    await axios.get('quotes').then((res) => {
+      setQuotes(res.data);
+    });
+  }
+
+  useEffect(() => {
+    getQuotes();
+  }, [])
+
+  useEffect(() => {
+    if (quotes) {
+      setRandomQuote(quotes[Math.floor(Math.random() * quotes.length)])
+    }
+  }, [setQuotes, quotes])
+
   const userProvider = useMemo(() => ({
     userValue, setUserValue
   }), [userValue, setUserValue]);
@@ -96,25 +115,31 @@ const App: FC = () => {
     votesValue, setVotesValue
   }), [votesValue, setVotesValue]);
 
+  const randomQuoteProvider = useMemo(() => ({
+    randomQuote, setRandomQuote
+  }), [randomQuote, setRandomQuote]);
+
   return (
     <UserContext.Provider value={userProvider}>
       <QuoteContext.Provider value={quoteProvider}>
         <VoteContext.Provider value={votesProvider}>
-          <Router>
-            <ToastContainer />
-            <Header />
-            <Switch>
-              <Route exact path='/' component={Home} />
-              <Route exact path='/login' component={Login} />
-              <Route exact path='/signup' component={Register} />
-              <PrivateRoute exact path='/me' component={Profile} />
-              <Route path='*' component={Login} />
-            </Switch>
-            <Footer />
-            <img className='background-image background-image1' src={isMobile ? TopRightMobile : TopRight} alt='' />
-            <img className='background-image background-image2' src={isMobile ? MiddleLeftMobile : MiddleLeft} alt='' />
-            <img className='background-image background-image3' src={isMobile ? MiddleRightMobile : MiddleRight} alt='' />
-          </Router>
+          <RandomQuoteContext.Provider value={randomQuoteProvider}>
+            <Router>
+              <ToastContainer />
+              <Header />
+              <Switch>
+                <Route exact path='/' component={Home} />
+                <Route exact path='/login' component={Login} />
+                <Route exact path='/signup' component={Register} />
+                <PrivateRoute exact path='/me' component={Profile} />
+                <Route path='*' component={Login} />
+              </Switch>
+              <Footer />
+              <img className='background-image background-image1' src={isMobile ? TopRightMobile : TopRight} alt='' />
+              <img className='background-image background-image2' src={isMobile ? MiddleLeftMobile : MiddleLeft} alt='' />
+              <img className='background-image background-image3' src={isMobile ? MiddleRightMobile : MiddleRight} alt='' />
+            </Router>
+          </RandomQuoteContext.Provider>
         </VoteContext.Provider>
       </QuoteContext.Provider>
     </UserContext.Provider>

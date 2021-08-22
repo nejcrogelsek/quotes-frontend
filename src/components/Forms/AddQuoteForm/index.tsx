@@ -16,7 +16,6 @@ const AddQuoteForm: FC = () => {
     });
 
     const onSubmit = handleSubmit((data) => {
-        console.log(data);
         updateQuote(data);
         reset();
     })

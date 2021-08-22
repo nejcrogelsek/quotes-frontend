@@ -43,8 +43,6 @@ const MostLiked: FC<Props> = ({ text }: Props) => {
 
     let loop: number = 0;
 
-    console.log(stateQuotes);
-
     return (
         <div className={text === 'signup' ? 'homepage-most-liked signup' : 'homepage-most-liked'}>
             <h2 className='page-title secondary'>Most liked quotes</h2>
