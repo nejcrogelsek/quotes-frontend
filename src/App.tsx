@@ -39,11 +39,35 @@ const App: FC = () => {
         setUserValue(res.data);
         await axios.get(`/quotes/${res.data.id}`).then(res => {
           setQuoteValue(res.data);
-        })
+        });
+        checkForRefreshToken();
       }).catch(err => {
         console.error('ERROR MESSAGE: ', err);
       })
     }
+  }
+
+  const checkForRefreshToken = () => {
+    if (localStorage.getItem('user')) {
+      const payload = JSON.parse(getPayload());
+      const expiration = new Date(payload.exp);
+      const now = new Date();
+      const minutes = 1000 * 60 * 14;
+
+      if (expiration.getTime() - now.getTime() < minutes) {
+        axios.post('users/refresh-token', { name: payload.name, sub: payload.sub }).then(async (res) => {
+          console.log(res.data.access_token);
+          localStorage.setItem('user', res.data.access_token);
+        });
+      } else {
+        console.log("JWT is valid for more than 1 minutes", payload);
+      }
+    }
+  }
+
+  function getPayload() {
+    const token: string = localStorage.getItem('user')!;
+    return atob(token.split(".")[1]);
   }
 
   useEffect(() => {
@@ -54,6 +78,14 @@ const App: FC = () => {
       window.removeEventListener('resize', checkIfMobile);
     };
   }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      checkForRefreshToken();
+    }, 1000 * 60 * 14);
+
+    return () => clearInterval(interval);
+  }, [])
 
   const userProvider = useMemo(() => ({
     userValue, setUserValue
