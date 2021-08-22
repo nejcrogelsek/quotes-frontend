@@ -1,4 +1,5 @@
 import { UserData } from "./auth.interface"
+import { VoteData } from "./vote.interface"
 
 export type AddQuoteData = {
     message: string;
@@ -7,7 +8,7 @@ export type AddQuoteData = {
 export type QuoteData = {
     id: number;
     message: string;
-    votes: number;
+    votes: VoteData[];
     user: UserData;
     created_at: string;
     updated_at: string;

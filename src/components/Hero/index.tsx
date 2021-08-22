@@ -8,19 +8,19 @@ const Hero: FC = () => {
     const data = [
         {
             id: 1,
-            votes: 52,
+            votes: [],
             message: 'All our dreams can come true, if we have the courage to pursue them.',
             user: { id: 1, first_name: 'Eleanor', last_name: 'Pena', profile_image: ProfileUrl1, email: 'elenor@gmail.com' }
         },
         {
             id: 2,
-            votes: 154,
+            votes: [],
             message: "Twenty years from now you will be more disappointed by the things that you didn't do than by the ones you did do. So throw off the bowlines. Sail away from the safe harbor. Catch the trade winds in your sails. Explore. Dream. Discover.",
             user: { id: 1, first_name: 'Marvin', last_name: 'McKinney', profile_image: ProfileUrl2, email: 'marvin@gmail.com' }
         },
         {
             id: 3,
-            votes: 52,
+            votes: [],
             message: 'All our dreams can come true, if we have the courage to pursue them.',
             user: { id: 1, first_name: 'Eleanor', last_name: 'Pena', profile_image: ProfileUrl1, email: 'elenor@gmail.com' }
         },
