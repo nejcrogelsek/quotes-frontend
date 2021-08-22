@@ -43,6 +43,7 @@ const UpdateUserForm: FC = () => {
 
         } catch (err) {
             console.log('ERROR MESSAGE:', err);
+            toast.error(`Email: ${err.config.data.split('"')[5]} already exist!`);
         }
     }
 

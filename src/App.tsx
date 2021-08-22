@@ -35,9 +35,9 @@ const App: FC = () => {
   const checkIfAccessTokenExists = async () => {
     const token: string | null = localStorage.getItem('user');
     if (token) {
-      await axios.get('/users/protected', { headers: { 'Authorization': `Bearer ${token}` } }).then((res) => {
+      await axios.get('/users/protected', { headers: { 'Authorization': `Bearer ${token}` } }).then(async (res) => {
         setUserValue(res.data);
-        axios.get(`/quotes/${res.data.id}`).then(res => {
+        await axios.get(`/quotes/${res.data.id}`).then(res => {
           setQuoteValue(res.data);
         })
       }).catch(err => {

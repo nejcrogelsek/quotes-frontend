@@ -1,14 +1,19 @@
 import axios from '../../../api/axios';
-import { FC, useContext } from 'react';
+import { FC, useContext, useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { AddQuoteData } from '../../../interfaces/quote.interface';
 import { UserContext } from '../../../stores/user.context';
 import { QuoteContext } from '../../../stores/quote.context';
 
 const AddQuoteForm: FC = () => {
-    const { register, handleSubmit, formState: { errors }, reset } = useForm<AddQuoteData>();
+    const [messageDefaultValue, setMessageDefaultValue] = useState('');
     const { userValue } = useContext(UserContext);
     const { quoteValue, setQuoteValue } = useContext(QuoteContext);
+    const { register, handleSubmit, formState: { errors }, reset } = useForm<AddQuoteData>({
+        defaultValues: {
+            message: messageDefaultValue
+        }
+    });
 
     const onSubmit = handleSubmit((data) => {
         console.log(data);
@@ -29,6 +34,12 @@ const AddQuoteForm: FC = () => {
             console.log('Error message:', err);
         }
     }
+
+    useEffect(() => {
+        if (quoteValue) {
+            setMessageDefaultValue(quoteValue.message);
+        }
+    }, [quoteValue, setQuoteValue])
 
 
     return (

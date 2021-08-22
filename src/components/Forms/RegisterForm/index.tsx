@@ -60,8 +60,7 @@ const RegisterForm: FC = () => {
     }
 
     const fileSelected = async (e: any) => {
-        const file: Blob | Uint8Array | ArrayBuffer = e.target.files[0];
-        setFile(file)
+        setFile(e.target.files[0]);
     }
 
     if (userValue) {
