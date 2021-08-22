@@ -23,6 +23,7 @@ const QuoteBlock: FC<Props> = ({ id, votes, message, user }: Props) => {
     const { quoteValue, setQuoteValue } = useContext(QuoteContext);
     const { votesValue, setVotesValue } = useContext(VoteContext);
     const [allow, setAllow] = useState<boolean>(true);
+    const [stateVotes, setStateVotes] = useState<number>(0);
 
     const getVotes = async () => {
         await axios.get('votes').then((res) => {
@@ -36,6 +37,7 @@ const QuoteBlock: FC<Props> = ({ id, votes, message, user }: Props) => {
                 axios.post(`/votes/user/${user.id}/upvote`, { quote_id: id, user_id: userValue.id }).then((res) => {
                     getVotes();
                     setAllow(false);
+                    setStateVotes(value => value + 1);
                 });
             }
         } else {
@@ -49,13 +51,23 @@ const QuoteBlock: FC<Props> = ({ id, votes, message, user }: Props) => {
                 axios.delete(`/votes/user/${user.id}/downvote`, { data: { quote_id: id, user_id: userValue.id } }).then((res) => {
                     getVotes();
                     setAllow(true);
+                    setStateVotes(value => value - 1);
                 });
             }
         }
     }
 
+    const setVotesState = () => {
+        if (location.pathname.split('/').length === 2 && location.pathname.split('/')[1] === 'me') {
+            setStateVotes(quoteValue.votes.length);
+        } else if (votes) {
+            setStateVotes(votes.length);
+        }
+    }
+
     useEffect(() => {
         getVotes();
+        setVotesState();
     }, [])
 
     useEffect(() => {
@@ -63,7 +75,6 @@ const QuoteBlock: FC<Props> = ({ id, votes, message, user }: Props) => {
             for (let i: number = 0; i < votesValue.length; i++) {
                 if (userValue.id === votesValue[i].user_id && id === votesValue[i].quote_id) {
                     setAllow(false);
-                    console.log('false allow');
                 }
             }
         }
@@ -103,10 +114,7 @@ const QuoteBlock: FC<Props> = ({ id, votes, message, user }: Props) => {
                         </Link>}
 
                         <span className='quote-votes'>
-                            {location.pathname.split('/').length === 2 && location.pathname.split('/')[1] === 'me' ?
-                                quoteValue.votes.length
-                                :
-                                votes.length}
+                            {stateVotes}
                         </span>
                         {userValue ? <button className='quote-downvote' onClick={downvote}>
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-chevron-down" viewBox="0 0 16 16">

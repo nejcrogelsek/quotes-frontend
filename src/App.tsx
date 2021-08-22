@@ -56,11 +56,8 @@ const App: FC = () => {
 
       if (expiration.getTime() - now.getTime() < minutes) {
         axios.post('users/refresh-token', { name: payload.name, sub: payload.sub }).then(async (res) => {
-          console.log(res.data.access_token);
           localStorage.setItem('user', res.data.access_token);
         });
-      } else {
-        console.log("JWT is valid for more than 1 minutes", payload);
       }
     }
   }
