@@ -13,7 +13,7 @@ const Banner: FC = () => {
                 <h2 className='page-title text-center'>{userValue.first_name}{' '}{userValue.last_name}</h2>
                 <div className='quote-block quote-block-mini'>
                     <p>Quotastic karma</p>
-                    <span>{quoteValue && quoteValue.votes}</span>
+                    <span>{quoteValue && quoteValue.votes.length}</span>
                 </div>
             </div>
         </div>
