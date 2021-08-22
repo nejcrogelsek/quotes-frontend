@@ -1,5 +1,5 @@
 import { Avatar, } from '@material-ui/core';
-import { FC, useContext, useState } from 'react';
+import { FC, useContext, useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link, Redirect } from 'react-router-dom';
 import axios from '../../../api/axios';
@@ -9,7 +9,8 @@ import { UserContext } from '../../../stores/user.context';
 import { QuoteContext } from '../../../stores/quote.context';
 
 const RegisterForm: FC = () => {
-    const [file, setFile] = useState<Blob | Uint8Array | ArrayBuffer | undefined>(undefined);
+    const [file, setFile] = useState<File | null>(null);
+    const [preview, setPreview] = useState<string | null>(null);
     const { register, handleSubmit, formState: { errors }, reset } = useForm<SignUpData>();
     const { userValue, setUserValue } = useContext(UserContext);
     const { setQuoteValue } = useContext(QuoteContext);
@@ -22,7 +23,7 @@ const RegisterForm: FC = () => {
         try {
             if (createUserDto.password.match(/((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/) && createUserDto.password === createUserDto.confirm_password) {
                 // get secure url from our server
-                if (file !== undefined) {
+                if (file !== null) {
                     const { data } = await axios.get('users/upload');
 
                     // post the image directly to the s3 bucket
@@ -60,8 +61,25 @@ const RegisterForm: FC = () => {
     }
 
     const fileSelected = async (e: any) => {
-        setFile(e.target.files[0]);
+        const file = e.target.files[0];
+        if (file && file.type.substr(0, 5) === 'image') {
+            setFile(file);
+        } else {
+            setFile(null);
+        }
     }
+
+    useEffect(() => {
+        if (file) {
+            const reader = new FileReader();
+            reader.onloadend = () => {
+                setPreview(reader.result as string);
+            }
+            reader.readAsDataURL(file);
+        } else {
+            setPreview(null);
+        }
+    }, [file])
 
     if (userValue) {
         return <Redirect to='/me' />
@@ -72,7 +90,7 @@ const RegisterForm: FC = () => {
             <ToastContainer />
             <form onSubmit={onSubmit} className='form'>
                 <div className='form-element image'>
-                    <label htmlFor='file' className='form-label'><Avatar /></label>
+                    <label htmlFor='file' className='form-label'><Avatar src={preview as string} /></label>
                     <input type='file' accept='image/*' name='file' className='file-control' onChange={fileSelected} />
                 </div>
                 <div className='form-element'>
