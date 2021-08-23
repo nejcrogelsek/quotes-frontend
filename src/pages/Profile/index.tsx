@@ -1,5 +1,5 @@
 import { FC, useContext } from 'react'
-import { ProfileMostLiked, ProfileBanner, ProfileQuoteBlock, QuoteBlock } from '../../components'
+import { ProfileMostLiked, ProfileBanner, QuoteBlock } from '../../components'
 import { QuoteContext } from '../../stores/quote.context';
 
 const Profile: FC = () => {

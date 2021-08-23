@@ -1,65 +1,2158 @@
 [
     {
         "id": 1,
-        "votes": 80,
-        "quote": "You miss 100% of the shots you don't take.",
-        "username": "Jacob Jones",
-        "image_url": "../../assets/images/profile8.png"
+        "votes": [
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            }
+        ],
+        "message": "All our dreams can come true, if we have the courage to pursue them.",
+        "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
     },
     {
         "id": 2,
-        "votes": 54,
-        "quote": "People will forget what you said. People will forget what you did. But people will never forget how you made them feel.",
-        "username": "Marvin McKinney",
-        "image_url": "../../assets/images/profile1.png"
+        "votes": [
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            }
+        ],
+        "message": "Twenty years from now you will be more disappointed by the things that you didn't do than by the ones you did do. So throw off the bowlines. Sail away from the safe harbor. Catch the trade winds in your sails. Explore. Dream. Discover.",
+        "user": { "id": 1, "first_name": "Marvin", "last_name": "McKinney", "profile_image": "../../assets/images/profile3.png", "email": "marvin@gmail.com" }
     },
     {
         "id": 3,
-        "votes": 177,
-        "quote": "Logic will get you from A to B. Imagination will take you everywhere.",
-        "username": "Leslie Alexander",
-        "image_url": "../../assets/images/profile4.png"
-    },
-    {
-        "id": 4,
-        "votes": 154,
-        "quote": "Twenty years from now you will be more disappointed by the things that you didn't do than by the ones you did do. So throw off the bowlines. Sail away from the safe harbor. Catch the trade winds in your sails. Explore. Dream. Discover.",
-        "username": "Marvin McKinney",
-        "image_url": "../../assets/images/profile5.png"
-    },
-    {
-        "id": 5,
-        "votes": 52,
-        "quote": "People will forget what you said. People will forget what you did. But people will never forget how you made them feel.",
-        "username": "Ralph Edwards",
-        "image_url": "../../assets/images/profile9.png"
-    },
-    {
-        "id": 6,
-        "votes": 100,
-        "quote": "All our dreams can come true, if we have the courage to pursue them.",
-        "username": "John Scott",
-        "image_url": "../../assets/images/profile6.png"
-    },
-    {
-        "id": 7,
-        "votes": 196,
-        "quote": "What lies behind us and what lies before us are tiny matters compared to what lies within us.",
-        "username": "Kristin Watson",
-        "image_url": "../../assets/images/profile2.png"
-    },
-    {
-        "id": 8,
-        "votes": 88,
-        "quote": "What lies behind us and what lies before us are tiny matters compared to what lies within us.",
-        "username": "Elenor Pena",
-        "image_url": "../../assets/images/profile7.png"
-    },
-    {
-        "id": 9,
-        "votes": 185,
-        "quote": "All our dreams can come true, if we have the courage to pursue them.",
-        "username": "Dianne Russell",
-        "image_url": "../../assets/images/profile3.png"
+        "votes": [
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            },
+            {
+                "id": 1,
+                "quote_id": 1,
+                "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
+            }
+        ],
+        "message": "What lies behind us and what lies before us are tiny matters compared to what lies within us.",
+        "user": { "id": 1, "first_name": "Eleanor", "last_name": "Pena", "profile_image": "../../assets/images/profile2.png", "email": "elenor@gmail.com" }
     }
 ]

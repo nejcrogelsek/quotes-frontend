@@ -1,17 +1,20 @@
 import axios from '../../../api/axios';
-import { FC, useContext, useEffect, useState } from 'react';
+import { FC, useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import { AddQuoteData } from '../../../interfaces/quote.interface';
 import { UserContext } from '../../../stores/user.context';
 import { QuoteContext } from '../../../stores/quote.context';
 
-const AddQuoteForm: FC = () => {
-    const [messageDefaultValue, setMessageDefaultValue] = useState('');
+interface Props {
+    message: string;
+}
+
+const AddQuoteForm: FC<Props> = ({ message }: Props) => {
     const { userValue } = useContext(UserContext);
-    const { quoteValue, setQuoteValue } = useContext(QuoteContext);
+    const { setQuoteValue } = useContext(QuoteContext);
     const { register, handleSubmit, formState: { errors }, reset } = useForm<AddQuoteData>({
         defaultValues: {
-            message: messageDefaultValue
+            message: message
         }
     });
 
@@ -34,13 +37,6 @@ const AddQuoteForm: FC = () => {
         }
     }
 
-    useEffect(() => {
-        if (quoteValue) {
-            setMessageDefaultValue(quoteValue.message);
-        }
-    }, [quoteValue, setQuoteValue])
-
-
     return (
         <form onSubmit={onSubmit} className='form'>
             <div className='form-element textarea'>
@@ -48,7 +44,7 @@ const AddQuoteForm: FC = () => {
                 {errors.message && <span className='form-text required'>{errors.message.message}</span>}
             </div>
             <div className='buttons'>
-                <input className='site-btn btn-orange' type='submit' value='Submit' data-bs-dismiss="modal" />
+                <input className='site-btn btn-orange' name='message' type='submit' value='Submit' data-bs-dismiss="modal" />
                 <button type="button" className="btn" data-bs-dismiss="modal" aria-label="Close">Close</button>
             </div>
         </form>

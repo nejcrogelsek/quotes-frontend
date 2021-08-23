@@ -93,7 +93,7 @@
   padding: 1rem;
   border-radius: 1rem;
   width: 100%;
-  margin: 2rem auto 0 auto;
+  margin: 2rem auto 3rem auto;
   max-width: 420px;
   display: flex;
   padding: 1rem 2rem 1rem 1rem;
@@ -156,13 +156,14 @@
   position: relative;
   > .quote-block {
     border-radius: 8px;
-    filter: blur(4px);
+    filter: blur(1.5px);
     width: 85%;
     @media (min-width: 413px) {
       width: 302px;
     }
     &:nth-child(2) {
       width: 100%;
+      max-width: 344px;
       border-radius: 1rem;
       filter: blur(0);
       position: absolute;
@@ -309,10 +310,17 @@
       font-size: 5.125rem;
     }
     .hero-quotes-wrap {
+      height: 350px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       > .quote-block {
         width: 387px;
         &:nth-child(2) {
           width: 100%;
+          max-width: 420px;
+          margin: 0;
+          top: 56%;
         }
       }
     }

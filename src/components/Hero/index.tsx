@@ -1,30 +1,14 @@
-import { FC } from 'react'
+import { FC, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { QuoteBlock } from '..'
-import ProfileUrl1 from '../../assets/images/profile3.png';
-import ProfileUrl2 from '../../assets/images/profile2.png';
+import staticData from '../../assets/db/quotes.json';
+import { IStaticData } from '../../interfaces/app.interface';
 
 const Hero: FC = () => {
-    const data = [
-        {
-            id: 1,
-            votes: [],
-            message: 'All our dreams can come true, if we have the courage to pursue them.',
-            user: { id: 1, first_name: 'Eleanor', last_name: 'Pena', profile_image: ProfileUrl1, email: 'elenor@gmail.com' }
-        },
-        {
-            id: 2,
-            votes: [],
-            message: "Twenty years from now you will be more disappointed by the things that you didn't do than by the ones you did do. So throw off the bowlines. Sail away from the safe harbor. Catch the trade winds in your sails. Explore. Dream. Discover.",
-            user: { id: 1, first_name: 'Marvin', last_name: 'McKinney', profile_image: ProfileUrl2, email: 'marvin@gmail.com' }
-        },
-        {
-            id: 3,
-            votes: [],
-            message: 'All our dreams can come true, if we have the courage to pursue them.',
-            user: { id: 1, first_name: 'Eleanor', last_name: 'Pena', profile_image: ProfileUrl1, email: 'elenor@gmail.com' }
-        },
-    ]
+    const [data, setData] = useState<IStaticData>([]);
+    useEffect(() => {
+        setData(staticData);
+    }, [])
     return (
         <div className='hero-section'>
             <div className='row'>
