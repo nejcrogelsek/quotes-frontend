@@ -1,3 +1,5 @@
+import { Dispatch, SetStateAction } from "react";
+
 export type SignUpData = {
     email: string;
     first_name: string;
@@ -22,3 +24,8 @@ export type UserData = {
 export interface UserProps {
     user: UserData
 }
+
+export type UserStore =
+    { userValue: UserStore; setUserValue: Dispatch<SetStateAction<UserStore>>; }
+    | { userValue: UserData | null; setUserValue: React.Dispatch<React.SetStateAction<UserData | null>>; }
+    | null;

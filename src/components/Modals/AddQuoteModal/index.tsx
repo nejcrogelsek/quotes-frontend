@@ -8,7 +8,7 @@ const AddQuoteModal: FC = () => {
     const { userValue, setUserValue } = useContext(UserContext);
     const [message, setMessage] = useState<string | null>(null);
     useEffect(() => {
-        if (quoteValue) {
+        if (quoteValue && quoteValue.message) {
             setMessage(quoteValue.message);
         }
     }, [quoteValue, setQuoteValue, userValue, setUserValue])
@@ -19,7 +19,7 @@ const AddQuoteModal: FC = () => {
                     <div className='modal-body'>
                         <h2 className='page-title'>Are you feeling <span>inspired?</span></h2>
                         <p>You can post one quote. You can delete it on your profile or edit in this window.</p>
-                        {message ? <AddQuoteForm message={message} /> : <div>Loading...</div>}
+                        {message && <AddQuoteForm message={message} />}
                     </div>
                 </div>
             </div>
