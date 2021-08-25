@@ -41,7 +41,7 @@ const RegisterForm: FC = () => {
                         password: createUserDto.password,
                         confirm_password: createUserDto.confirm_password,
                     }
-                    await axios.post('/users/create', finalData).then(async (res) => {
+                    await axios.post('/users/signup', finalData).then(async (res) => {
                         await setUserValue(res.data.user);
                         localStorage.setItem('user', res.data.access_token);
                         await axios.get(`/quotes/${res.data.user.id}`).then(res => {
