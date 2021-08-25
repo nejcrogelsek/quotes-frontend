@@ -5,16 +5,12 @@ import { AddQuoteData } from '../../../interfaces/quote.interface';
 import { UserContext } from '../../../stores/user.context';
 import { QuoteContext } from '../../../stores/quote.context';
 
-interface Props {
-    message: string;
-}
-
-const AddQuoteForm: FC<Props> = ({ message }: Props) => {
+const AddQuoteForm: FC = () => {
     const { userValue } = useContext(UserContext);
-    const { setQuoteValue } = useContext(QuoteContext);
+    const { quoteValue, setQuoteValue } = useContext(QuoteContext);
     const { register, handleSubmit, formState: { errors }, reset } = useForm<AddQuoteData>({
         defaultValues: {
-            message: message
+            message: quoteValue ? quoteValue.message : ''
         }
     });
 
