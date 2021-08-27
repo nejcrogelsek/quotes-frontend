@@ -7,6 +7,7 @@ import { SignUpData } from '../../../interfaces/auth.interface';
 import { ToastContainer, toast } from 'react-toastify';
 import { UserContext } from '../../../stores/user.context';
 import { QuoteContext } from '../../../stores/quote.context';
+import userStore from '../../../stores/user.store'
 
 const RegisterForm: FC = () => {
     const [file, setFile] = useState<File | null>(null);
@@ -43,9 +44,11 @@ const RegisterForm: FC = () => {
                     }
                     await axios.post('/users/signup', finalData).then(async (res) => {
                         await setUserValue(res.data.user);
+                        userStore.user = res.data.user;
                         localStorage.setItem('user', res.data.access_token);
                         await axios.get(`/quotes/${res.data.user.id}`).then(res => {
                             setQuoteValue(res.data);
+                            userStore.userQuote = res.data;
                         })
                     });
                 } else {
