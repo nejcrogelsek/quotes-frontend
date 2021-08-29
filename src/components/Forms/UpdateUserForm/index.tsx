@@ -1,4 +1,4 @@
-import { FC, useContext } from 'react';
+import { FC, useContext, useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import axios from '../../../api/axios';
 import { SignUpData } from '../../../interfaces/auth.interface';
@@ -7,16 +7,17 @@ import { UserContext } from '../../../stores/user.context';
 
 const UpdateUserForm: FC = () => {
     const { userValue, setUserValue } = useContext(UserContext)
+    const [email, setEmail] = useState<string>('')
+    const [firstName, setFirstName] = useState<string>('')
+    const [lastName, setLastName] = useState<string>('')
 
     const { register, handleSubmit, formState: { errors } } = useForm<SignUpData>({
         defaultValues: {
-            email: userValue ? userValue.email : '',
-            first_name: userValue ? userValue.first_name : '',
-            last_name: userValue ? userValue.last_name : ''
+            email: email,
+            first_name: firstName,
+            last_name: lastName,
         }
     });
-
-
 
     const onSubmit = handleSubmit((data) => {
         updateUser(data);
@@ -47,27 +48,35 @@ const UpdateUserForm: FC = () => {
         }
     }
 
+    useEffect(() => {
+        if (userValue) {
+            setEmail(userValue.email);
+            setFirstName(userValue.first_name);
+            setLastName(userValue.last_name);
+        }
+    }, [userValue])
+
     return (
         <>
             <ToastContainer />
             <form onSubmit={onSubmit} className='form'>
                 <div className='form-element'>
                     <label htmlFor='email' className='form-label'>Email</label>
-                    <input {...register('email', { required: 'Email is required' })} type='email' name='email' className='form-control' />
+                    <input {...register('email', { required: 'Email is required' })} type='email' name='email' className='form-control' value={email} onChange={e => setEmail(e.target.value)} />
                     {errors.email && <span className='form-text required'>{errors.email.message}</span>}
                 </div>
                 <div className="row">
                     <div className="col">
                         <div className='form-element'>
                             <label htmlFor='first_name' className='form-label'>First name</label>
-                            <input {...register('first_name', { required: 'First name is required' })} type='text' name='first_name' className='form-control' />
+                            <input {...register('first_name', { required: 'First name is required' })} type='text' name='first_name' className='form-control' value={firstName} onChange={e => setFirstName(e.target.value)} />
                             {errors.first_name && <span className='form-text required'>{errors.first_name.message}</span>}
                         </div>
                     </div>
                     <div className="col">
                         <div className='form-element'>
                             <label htmlFor='last_name' className='form-label'>Last name</label>
-                            <input {...register('last_name', { required: 'Last name is required' })} type='text' name='last_name' className='form-control' />
+                            <input {...register('last_name', { required: 'Last name is required' })} type='text' name='last_name' className='form-control' value={lastName} onChange={e => setLastName(e.target.value)} />
                             {errors.last_name && <span className='form-text required'>{errors.last_name.message}</span>}
                         </div>
                     </div>
