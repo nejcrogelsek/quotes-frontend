@@ -58,8 +58,8 @@ const QuoteBlock: FC<Props> = ({ id, votes, message, user }: Props) => {
     }
 
     const setVotesState = () => {
-        if (location.pathname.split('/').length === 2 && location.pathname.split('/')[1] === 'me') {
-            setStateVotes(quoteValue.votes.length);
+        if (location.pathname.split('/').length === 2 && location.pathname.split('/')[1] === 'me' && quoteValue) {
+            if (quoteValue.votes) setStateVotes(quoteValue.votes.length); else setStateVotes(0);
         } else if (votes) {
             setStateVotes(votes.length);
         }

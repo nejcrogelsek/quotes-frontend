@@ -51,9 +51,17 @@ const MostLiked: FC<Props> = ({ text }: Props) => {
                 {stateQuotes.map(quote => {
                     loop++;
                     if (isMobile === true && loop < 5) {
-                        return null
+                        if (quote.message === '') {
+                            return null
+                        } else {
+                            return <QuoteBlock key={quote.id} id={quote.id} votes={quote.votes} message={quote.message} user={quote.user} />
+                        }
                     } else if (isMobile === false && loop < 10) {
-                        return <QuoteBlock key={quote.id} id={quote.id} votes={quote.votes} message={quote.message} user={quote.user} />
+                        if (quote.message === '') {
+                            return null
+                        } else {
+                            return <QuoteBlock key={quote.id} id={quote.id} votes={quote.votes} message={quote.message} user={quote.user} />
+                        }
                     } else {
                         return null
                     }

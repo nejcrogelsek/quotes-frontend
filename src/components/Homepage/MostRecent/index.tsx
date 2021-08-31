@@ -20,7 +20,6 @@ const MostRecent: FC = () => {
 
     const getRecentQuotes = async () => {
         await axios.get('quotes/recent').then((res) => {
-            console.log(res.data);
             setStateQuotes(res.data);
         })
     }
