@@ -201,6 +201,7 @@
   }
   .signup {
     width: 184px;
+    margin: 48px auto 0;
   }
 }
 .homepage-most-liked.signup,
@@ -349,10 +350,8 @@
     }
     .quotes-wrap {
       display: flex;
-      flex-direction: column;
       flex-wrap: wrap;
       gap: 20px;
-      max-height: 800px;
       > div {
         margin: 0 0 0 0;
         width: calc(100% / 3 - 40px);
@@ -414,17 +413,5 @@
     h1 {
       font-size: 6.125rem;
     }
-  }
-  .homepage-most-liked {
-    .quotes-wrap {
-      > div {
-        width: 100%;
-      }
-    }
-  }
-}
-@media #{$huge} {
-  .quote-block {
-    max-width: 415px;
   }
 }

@@ -57,17 +57,9 @@ const QuoteBlock: FC<Props> = ({ id, votes, message, user }: Props) => {
         }
     }
 
-    const setVotesState = () => {
-        if (location.pathname.split('/').length === 2 && location.pathname.split('/')[1] === 'me' && quoteValue) {
-            if (quoteValue.votes) setStateVotes(quoteValue.votes.length); else setStateVotes(0);
-        } else if (votes) {
-            setStateVotes(votes.length);
-        }
-    }
-
     useEffect(() => {
         getVotes();
-        setVotesState();
+        setStateVotes(votes.length);
     }, [])
 
     useEffect(() => {
@@ -130,16 +122,9 @@ const QuoteBlock: FC<Props> = ({ id, votes, message, user }: Props) => {
                     <div className="quote-part">
                         <p className='quote-text'>{message}</p>
                         <div className="quote-user">
-                            <Avatar src={location.pathname.split('/').length === 2 && location.pathname.split('/')[1] === 'me' ? userValue.profile_image : user.profile_image} />
+                            <Avatar src={user.profile_image} />
                             <span className='quote-username'>
-                                {location.pathname.split('/').length === 2 && location.pathname.split('/')[1] === 'me' ?
-                                    <>
-                                        {userValue.first_name}{' '}{userValue.last_name}
-                                    </> :
-                                    <>
-                                        {user && user.first_name}{' '}{user && user.last_name}
-                                    </>
-                                }
+                                {user && user.first_name}{' '}{user && user.last_name}
                             </span>
                         </div>
                     </div>
