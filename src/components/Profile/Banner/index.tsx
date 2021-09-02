@@ -19,7 +19,7 @@ const Banner: FC = () => {
                 <h2 className='page-title text-center'>{userValue.first_name}{' '}{userValue.last_name}</h2>
                 <div className='quote-block quote-block-mini'>
                     <p>Quotastic karma</p>
-                    <span>{numVotes}</span>
+                    <span>{numVotes ? numVotes : 0}</span>
                 </div>
             </div>
         </div>

@@ -1,14 +1,14 @@
 import { Avatar } from '@material-ui/core'
 import { FC, useContext, useEffect, useState } from 'react'
-import { UserContext } from '../../stores/user.context'
-import { VoteContext } from '../../stores/vote.context';
-import axios from '../../api/axios';
-import { UserData } from '../../interfaces/auth.interface';
-import { QuoteContext } from '../../stores/quote.context';
+import { UserContext } from '../../../stores/user.context'
+import { VoteContext } from '../../../stores/vote.context';
+import axios from '../../../api/axios';
+import { UserData } from '../../../interfaces/auth.interface';
+import { QuoteContext } from '../../../stores/quote.context';
 import { toast } from 'react-toastify';
 import { Link, useLocation } from 'react-router-dom';
 import { Add } from '@material-ui/icons';
-import { VoteData } from '../../interfaces/vote.interface';
+import { VoteData } from '../../../interfaces/vote.interface';
 
 interface Props {
     id: number;
@@ -57,17 +57,9 @@ const QuoteBlock: FC<Props> = ({ id, votes, message, user }: Props) => {
         }
     }
 
-    const setVotesState = () => {
-        if (location.pathname.split('/').length === 2 && location.pathname.split('/')[1] === 'me') {
-            setStateVotes(quoteValue.votes.length);
-        } else if (votes) {
-            setStateVotes(votes.length);
-        }
-    }
-
     useEffect(() => {
         getVotes();
-        setVotesState();
+        setStateVotes(votes.length);
     }, [])
 
     useEffect(() => {
@@ -130,16 +122,9 @@ const QuoteBlock: FC<Props> = ({ id, votes, message, user }: Props) => {
                     <div className="quote-part">
                         <p className='quote-text'>{message}</p>
                         <div className="quote-user">
-                            <Avatar src={location.pathname.split('/').length === 2 && location.pathname.split('/')[1] === 'me' ? userValue.profile_image : user.profile_image} />
+                            <Avatar src={user.profile_image} />
                             <span className='quote-username'>
-                                {location.pathname.split('/').length === 2 && location.pathname.split('/')[1] === 'me' ?
-                                    <>
-                                        {userValue.first_name}{' '}{userValue.last_name}
-                                    </> :
-                                    <>
-                                        {user && user.first_name}{' '}{user && user.last_name}
-                                    </>
-                                }
+                                {user && user.first_name}{' '}{user && user.last_name}
                             </span>
                         </div>
                     </div>

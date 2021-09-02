@@ -94,7 +94,7 @@
   border-radius: 1rem;
   width: 100%;
   margin: 2rem auto 3rem auto;
-  max-width: 420px;
+  max-width: 400px;
   display: flex;
   padding: 1rem 2rem 1rem 1rem;
   background: $white;
@@ -141,6 +141,7 @@
       font-size: 1rem;
       margin-bottom: 13px;
       line-height: 18.78px; // line-height: 1.17;
+      padding-right: 15px;
     }
     .quote-user {
       display: flex;
@@ -200,6 +201,7 @@
   }
   .signup {
     width: 184px;
+    margin: 48px auto 0;
   }
 }
 .homepage-most-liked.signup,
@@ -290,6 +292,17 @@
     width: 148px;
     margin: 2rem auto 120px;
   }
+  .quotes-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .quote-block {
+      margin: 10px 0;
+      .remove-quote {
+        display: none;
+      }
+    }
+  }
 }
 @media #{$large} {
   .login-page,
@@ -337,18 +350,14 @@
     }
     .quotes-wrap {
       display: flex;
-      flex-direction: column;
       flex-wrap: wrap;
-      max-height: 600px;
+      gap: 20px;
       > div {
-        margin: 0 0 19px 0;
+        margin: 0 0 0 0;
         width: calc(100% / 3 - 40px);
-        &:nth-child(4),
-        &:nth-child(5),
-        &:nth-child(6) {
-          margin-left: 20px;
-          margin-right: 20px;
-        }
+      }
+      .quote-block {
+        margin: 0;
       }
     }
     .load-more {
@@ -393,6 +402,8 @@
       .quotes-wrap {
         display: flex;
         flex-wrap: wrap;
+        gap: 20px;
+        flex-direction: row;
       }
     }
   }
@@ -401,13 +412,6 @@
   .hero-section {
     h1 {
       font-size: 6.125rem;
-    }
-  }
-  .homepage-most-liked {
-    .quotes-wrap {
-      > div {
-        width: 100%;
-      }
     }
   }
 }

@@ -25,6 +25,17 @@ export interface UserProps {
     user: UserData
 }
 
+export interface AuthReturnData {
+    user: {
+        id: number;
+        email: string;
+        first_name: string;
+        last_name: string;
+        profile_image: string;
+    },
+    access_token: string;
+}
+
 export type UserStore =
     { userValue: UserStore; setUserValue: Dispatch<SetStateAction<UserStore>>; }
     | { userValue: UserData | null; setUserValue: React.Dispatch<React.SetStateAction<UserData | null>>; }
