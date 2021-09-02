@@ -1,14 +1,14 @@
 import { Avatar } from '@material-ui/core'
 import { FC, useContext, useEffect, useState } from 'react'
-import { UserContext } from '../../stores/user.context'
-import { VoteContext } from '../../stores/vote.context';
-import axios from '../../api/axios';
-import { UserData } from '../../interfaces/auth.interface';
-import { QuoteContext } from '../../stores/quote.context';
+import { UserContext } from '../../../stores/user.context'
+import { VoteContext } from '../../../stores/vote.context';
+import axios from '../../../api/axios';
+import { UserData } from '../../../interfaces/auth.interface';
+import { QuoteContext } from '../../../stores/quote.context';
 import { toast } from 'react-toastify';
 import { Link, useLocation } from 'react-router-dom';
 import { Add } from '@material-ui/icons';
-import { VoteData } from '../../interfaces/vote.interface';
+import { VoteData } from '../../../interfaces/vote.interface';
 
 interface Props {
     id: number;

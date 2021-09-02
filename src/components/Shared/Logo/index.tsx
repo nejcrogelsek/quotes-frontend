@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import { Link } from 'react-router-dom'
-import LogoUrl from '../../assets/images/logo.png'
+import LogoUrl from '../../../assets/images/logo.png'
 
 const Logo: FC = () => {
     return (
