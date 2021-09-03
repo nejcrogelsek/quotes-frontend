@@ -3,7 +3,7 @@ import { ProfileMostLiked, ProfileBanner, QuoteBlock } from '../../components'
 import { QuoteContext } from '../../stores/quote.context';
 
 const Profile: FC = () => {
-    const { quoteValue } = useContext(QuoteContext)
+    const { quoteValue } = useContext(QuoteContext);
     return (
         <div className='profile-page'>
             <ProfileBanner />
