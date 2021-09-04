@@ -1,9 +1,6 @@
-import axios from '../../api/axios';
-import { FC, useContext, useEffect, useState } from 'react'
+import { FC, useContext } from 'react'
 import { Hero, MostLiked, QuoteBlock, MostRecent } from '../../components'
 import { UserContext } from '../../stores/user.context';
-import { VoteContext } from '../../stores/vote.context';
-import { QuoteData } from '../../interfaces/quote.interface';
 import { RandomQuoteContext } from '../../stores/random-quote.context';
 
 const Home: FC = () => {

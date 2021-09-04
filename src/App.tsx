@@ -97,9 +97,24 @@ const App: FC = () => {
     getQuotes();
   }, [])
 
-  useEffect(() => {
+  const randomQuoteFunc = () => {
     if (quotes) {
-      setRandomQuote(quotes[Math.floor(Math.random() * quotes.length)])
+      let quote = quotes[Math.floor(Math.random() * quotes.length)];
+      if (quote) {
+        const { message } = quote;
+        if (message === '') {
+          randomQuoteFunc();
+        } else {
+          setRandomQuote(quote);
+        }
+      }
+    }
+  }
+
+  useEffect(() => {
+    randomQuoteFunc();
+    return () => {
+      randomQuoteFunc();
     }
   }, [setQuotes, quotes])
 
