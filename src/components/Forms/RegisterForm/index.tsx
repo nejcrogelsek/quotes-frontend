@@ -22,7 +22,7 @@ const RegisterForm: FC = () => {
 
     const signup = async (createUserDto: SignUpData): Promise<any> => {
         try {
-            if (createUserDto.password.match(/((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/) && createUserDto.password === createUserDto.confirm_password) {
+            if (createUserDto.password === createUserDto.confirm_password) {
                 // get secure url from our server
                 if (file !== null) {
                     const { data } = await axios.get('users/upload');

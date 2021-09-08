@@ -99,15 +99,15 @@ const App: FC = () => {
 
   const randomQuoteFunc = () => {
     if (quotes) {
-      let quote = quotes[Math.floor(Math.random() * quotes.length)];
-      if (quote) {
-        const { message } = quote;
-        if (message === '') {
-          randomQuoteFunc();
-        } else {
-          setRandomQuote(quote);
-        }
-      }
+      // let quote = quotes[Math.floor(Math.random() * quotes.length)];
+      // if (quote) {
+      //   const { message } = quote;
+      //   if (message === '') {
+      //     randomQuoteFunc();
+      //   } else {
+      //     setRandomQuote(quote);
+      //   }
+      // }
     }
   }
 
