@@ -56,7 +56,7 @@ const MostLiked: FC<Props> = ({ text }: Props) => {
     return (
         <div className={text === 'signup' ? 'homepage-most-liked signup' : 'homepage-most-liked'}>
             <h2 className='page-title secondary'>Most liked quotes</h2>
-            <p>Most liked quotes on the platform.  Sign up or login to like the quotes  and keep them saved in your profile.</p>
+            <p>Most liked quotes on the platform. Sign up or login to like the quotes  and keep them saved in your profile.</p>
             <div className='quotes-wrap'>
                 {stateQuotes.slice(0, limit).map(quote => {
                     if (quote.message === '') {

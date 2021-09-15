@@ -12,7 +12,7 @@ import { VoteData } from '../../../interfaces/vote.interface';
 
 interface Props {
     id: number;
-    votes: VoteData[];
+    votes: VoteData[] | number;
     message: string;
     user: UserData;
 }
@@ -59,7 +59,11 @@ const QuoteBlock: FC<Props> = ({ id, votes, message, user }: Props) => {
 
     useEffect(() => {
         getVotes();
-        setStateVotes(votes.length);
+        if (typeof votes === 'number') {
+            setStateVotes(votes);
+        } else {
+            setStateVotes(votes.length);
+        }
     }, [])
 
     useEffect(() => {
