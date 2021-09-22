@@ -5,7 +5,6 @@ import { SignInData } from '../../../interfaces/auth.interface';
 import { UserContext } from '../../../stores/user.context';
 import { Redirect } from 'react-router-dom';
 import { QuoteContext } from '../../../stores/quote.context';
-import userStore from '../../../stores/user.store';
 
 const LoginForm: FC = () => {
     const { register, handleSubmit, formState: { errors }, reset } = useForm<SignInData>();
@@ -25,11 +24,9 @@ const LoginForm: FC = () => {
             };
             await axios.post('/users/login', repairedData).then(async (res) => {
                 await setUserValue(res.data.user);
-                userStore.user = res.data.user;
                 localStorage.setItem('user', res.data.access_token);
                 await axios.get(`/quotes/${res.data.user.id}`).then(res => {
                     setQuoteValue(res.data);
-                    userStore.userQuote = res.data;
                 })
             })
         } catch (err) {
