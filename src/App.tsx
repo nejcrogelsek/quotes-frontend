@@ -19,144 +19,176 @@ import { ToastContainer } from 'react-toastify'
 import { RandomQuoteContext } from './stores/random-quote.context'
 
 const App: FC = () => {
+	const [userValue, setUserValue] = useState<UserData | null>(null)
+	const [quoteValue, setQuoteValue] = useState<QuoteData | null>(null)
+	const [votesValue, setVotesValue] = useState<IVotes | null>(null)
+	const [randomQuote, setRandomQuote] = useState<RandomQuote | null>(null)
+	const [isMobile, setIsMobile] = useState(true)
+	const [quotes, setQuotes] = useState([])
 
-  const [userValue, setUserValue] = useState<UserData | null>(null);
-  const [quoteValue, setQuoteValue] = useState<QuoteData | null>(null);
-  const [votesValue, setVotesValue] = useState<IVotes | null>(null);
-  const [randomQuote, setRandomQuote] = useState<RandomQuote | null>(null);
-  const [isMobile, setIsMobile] = useState(true);
-  const [quotes, setQuotes] = useState([]);
+	const checkIfMobile = () => {
+		if (window.innerWidth < 992) {
+			setIsMobile(true)
+		} else {
+			setIsMobile(false)
+		}
+	}
 
-  const checkIfMobile = () => {
-    if (window.innerWidth < 992) {
-      setIsMobile(true);
-    } else {
-      setIsMobile(false);
-    }
-  };
+	const checkIfAccessTokenExists = async () => {
+		const token: string | null = localStorage.getItem('user')
+		if (token) {
+			await axios
+				.get('/users/protected', { headers: { Authorization: `Bearer ${token}` } })
+				.then((res) => {
+					setUserValue(res.data)
+					axios.get(`/quotes/${res.data.id}`).then((res) => {
+						setQuoteValue(res.data)
+					})
+					checkForRefreshToken()
+				})
+				.catch((err) => {
+					console.error('ERROR MESSAGE: ', err)
+				})
+		}
+	}
 
-  const checkIfAccessTokenExists = async () => {
-    const token: string | null = localStorage.getItem('user');
-    if (token) {
-      await axios.get('/users/protected', { headers: { 'Authorization': `Bearer ${token}` } }).then(async (res) => {
-        setUserValue(res.data);
-        await axios.get(`/quotes/${res.data.id}`).then(res => {
-          setQuoteValue(res.data);
-        });
-        checkForRefreshToken();
-      }).catch(err => {
-        console.error('ERROR MESSAGE: ', err);
-      })
-    }
-  }
+	const checkForRefreshToken = () => {
+		if (localStorage.getItem('user')) {
+			const payload = JSON.parse(getPayload())
+			const expiration = new Date(payload.exp)
+			const now = new Date()
+			const minutes = 1000 * 60 * 14
 
-  const checkForRefreshToken = () => {
-    if (localStorage.getItem('user')) {
-      const payload = JSON.parse(getPayload());
-      const expiration = new Date(payload.exp);
-      const now = new Date();
-      const minutes = 1000 * 60 * 14;
+			if (expiration.getTime() - now.getTime() < minutes) {
+				axios
+					.post('users/refresh-token', { name: payload.name, sub: payload.sub })
+					.then((res) => {
+						localStorage.setItem('user', res.data.access_token)
+					})
+			}
+		}
+	}
 
-      if (expiration.getTime() - now.getTime() < minutes) {
-        axios.post('users/refresh-token', { name: payload.name, sub: payload.sub }).then(async (res) => {
-          localStorage.setItem('user', res.data.access_token);
-        });
-      }
-    }
-  }
+	function getPayload() {
+		const token: string = localStorage.getItem('user')!
+		return atob(token.split('.')[1])
+	}
 
-  function getPayload() {
-    const token: string = localStorage.getItem('user')!;
-    return atob(token.split(".")[1]);
-  }
+	useEffect(() => {
+		checkIfAccessTokenExists()
+		checkIfMobile()
+		window.addEventListener('resize', checkIfMobile)
+		return () => {
+			window.removeEventListener('resize', checkIfMobile)
+		}
+	}, [])
 
-  useEffect(() => {
-    checkIfAccessTokenExists();
-    checkIfMobile();
-    window.addEventListener('resize', checkIfMobile);
-    return () => {
-      window.removeEventListener('resize', checkIfMobile);
-    };
-  }, []);
+	useEffect(() => {
+		const interval = setInterval(() => {
+			checkForRefreshToken()
+		}, 1000 * 60 * 14)
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      checkForRefreshToken();
-    }, 1000 * 60 * 14);
+		return () => clearInterval(interval)
+	}, [])
 
-    return () => clearInterval(interval);
-  }, [])
+	const getQuotes = async () => {
+		await axios.get('quotes').then((res) => {
+			setQuotes(res.data)
+		})
+	}
 
-  const getQuotes = async () => {
-    await axios.get('quotes').then((res) => {
-      setQuotes(res.data);
-    });
-  }
+	useEffect(() => {
+		getQuotes()
+	}, [])
 
-  useEffect(() => {
-    getQuotes();
-  }, [])
+	const randomQuoteFunc = () => {
+		if (quotes) {
+			let quote = quotes[Math.floor(Math.random() * quotes.length)]
+			if (quote) {
+				const { message } = quote
+				if (message !== '') {
+					setRandomQuote(quote)
+				}
+			}
+		}
+	}
 
-  const randomQuoteFunc = () => {
-    if (quotes) {
-      let quote = quotes[Math.floor(Math.random() * quotes.length)];
-      if (quote) {
-        const { message } = quote;
-        if (message !== '') {
-          setRandomQuote(quote);
-        }
-      }
-    }
-  }
+	useEffect(() => {
+		randomQuoteFunc()
+		return () => {
+			randomQuoteFunc()
+		}
+	}, [setQuotes, quotes])
 
-  useEffect(() => {
-    randomQuoteFunc();
-    return () => {
-      randomQuoteFunc();
-    }
-  }, [setQuotes, quotes])
+	const userProvider = useMemo(
+		() => ({
+			userValue,
+			setUserValue,
+		}),
+		[userValue, setUserValue]
+	)
 
-  const userProvider = useMemo(() => ({
-    userValue, setUserValue
-  }), [userValue, setUserValue]);
+	const quoteProvider = useMemo(
+		() => ({
+			quoteValue,
+			setQuoteValue,
+		}),
+		[quoteValue, setQuoteValue]
+	)
 
-  const quoteProvider = useMemo(() => ({
-    quoteValue, setQuoteValue
-  }), [quoteValue, setQuoteValue]);
+	const votesProvider = useMemo(
+		() => ({
+			votesValue,
+			setVotesValue,
+		}),
+		[votesValue, setVotesValue]
+	)
 
-  const votesProvider = useMemo(() => ({
-    votesValue, setVotesValue
-  }), [votesValue, setVotesValue]);
+	const randomQuoteProvider = useMemo(
+		() => ({
+			randomQuote,
+			setRandomQuote,
+		}),
+		[randomQuote, setRandomQuote]
+	)
 
-  const randomQuoteProvider = useMemo(() => ({
-    randomQuote, setRandomQuote
-  }), [randomQuote, setRandomQuote]);
-
-  return (
-    <UserContext.Provider value={userProvider}>
-      <QuoteContext.Provider value={quoteProvider}>
-        <VoteContext.Provider value={votesProvider}>
-          <RandomQuoteContext.Provider value={randomQuoteProvider}>
-            <Router>
-              <ToastContainer />
-              <Header />
-              <Switch>
-                <Route exact path='/' component={Home} />
-                <Route exact path='/login' component={Login} />
-                <Route exact path='/signup' component={Register} />
-                <PrivateRoute exact path='/me' component={Profile} />
-                <Route path='*' component={Login} />
-              </Switch>
-              <Footer />
-              <img className='background-image background-image1' src={isMobile ? TopRightMobile : TopRight} alt='' />
-              <img className='background-image background-image2' src={isMobile ? MiddleLeftMobile : MiddleLeft} alt='' />
-              <img className='background-image background-image3' src={isMobile ? MiddleRightMobile : MiddleRight} alt='' />
-            </Router>
-          </RandomQuoteContext.Provider>
-        </VoteContext.Provider>
-      </QuoteContext.Provider>
-    </UserContext.Provider>
-  )
+	return (
+		<UserContext.Provider value={userProvider}>
+			<QuoteContext.Provider value={quoteProvider}>
+				<VoteContext.Provider value={votesProvider}>
+					<RandomQuoteContext.Provider value={randomQuoteProvider}>
+						<Router>
+							<ToastContainer />
+							<Header />
+							<Switch>
+								<Route exact path='/' component={Home} />
+								<Route exact path='/login' component={Login} />
+								<Route exact path='/signup' component={Register} />
+								<PrivateRoute exact path='/me' component={Profile} />
+								<Route path='*' component={Login} />
+							</Switch>
+							<Footer />
+							<img
+								className='background-image background-image1'
+								src={isMobile ? TopRightMobile : TopRight}
+								alt=''
+							/>
+							<img
+								className='background-image background-image2'
+								src={isMobile ? MiddleLeftMobile : MiddleLeft}
+								alt=''
+							/>
+							<img
+								className='background-image background-image3'
+								src={isMobile ? MiddleRightMobile : MiddleRight}
+								alt=''
+							/>
+						</Router>
+					</RandomQuoteContext.Provider>
+				</VoteContext.Provider>
+			</QuoteContext.Provider>
+		</UserContext.Provider>
+	)
 }
 
 export default App
