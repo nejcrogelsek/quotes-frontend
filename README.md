@@ -17,6 +17,8 @@ Link to website (not active): https://quotastic-backend.s3.eu-north-1.amazonaws.
 
 Full-stack application that will allow the user to register, write one paragraph of motivational quote, review already registered users and their quotes, and upvote or downvote a quote.
 
+![quotes_homepage](./src/assets/images/quotes_homepage.png)
+
 #### Technologies
 
 - HTML
