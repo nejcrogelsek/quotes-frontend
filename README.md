@@ -19,13 +19,20 @@ Full-stack application that will allow the user to register, write one paragraph
 
 Here are some screenshots of the final app:
 
+**Home page (User is not authenticated)**
 ![quotes_homepage](./src/assets/images/quotes_homepage.png)
+**Home page (User is authenticated)**
 ![quotes_homepage_auth](./src/assets/images/quotes_homepage_auth.png)
 ![quotes_homepage2_auth](./src/assets/images/quotes_homepage2_auth.png)
+**Profile page**
 ![quotes_profile](./src/assets/images/quotes_profile.png)
+**Update user modal**
 ![quotes_modal](./src/assets/images/quotes_modal.png)
+**Add quote modal**
 ![quotes_modal_add](./src/assets/images/quotes_modal_add.png)
+**Login page**
 ![quotes_login](./src/assets/images/quotes_login.png)
+**Register page**
 ![quotes_register](./src/assets/images/quotes_register.png)
 
 #### Technologies
