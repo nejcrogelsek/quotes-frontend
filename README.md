@@ -31,9 +31,9 @@ Here are some screenshots of the final app:
 **Add quote modal**
 ![quotes_modal_add](./src/assets/images/quotes_modal_add.png)
 **Login page**
-![quotes_login](./src/assets/images/quotes_login.png)
+![quotes_login](./src/assets/images/quotes_homepage_login.png)
 **Register page**
-![quotes_register](./src/assets/images/quotes_register.png)
+![quotes_register](./src/assets/images/quotes_homepage_register.png)
 
 #### Technologies
 
